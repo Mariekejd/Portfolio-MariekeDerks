@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButton.addEventListener('click', () => {
         if (carouselContainer.classList.contains('active')) {
             carouselContainer.classList.remove('active');
-            carouselContainer.classList.remove('dropdown');
-            carouselContainer.style.display = 'none';
+            setTimeout(() => {
+                carouselContainer.classList.remove('dropdown');
+                carouselContainer.style.display = 'none';
+            }, 500); // Match this duration with the CSS transition
         } else {
             carouselContainer.style.display = 'block';
             setTimeout(() => {
@@ -19,6 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10); // Slight delay to ensure display is set before adding class
         }
         toggleButton.classList.toggle('active');
+    });
+
+    carouselContainer.addEventListener('transitionend', (event) => {
+        if (event.propertyName === 'opacity' && !carouselContainer.classList.contains('active')) {
+            carouselContainer.style.display = 'none';
+        }
     });
 
     let currentIndex = 0;

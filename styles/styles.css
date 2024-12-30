@@ -20,6 +20,142 @@ img{
 
 /* fonts */
 
+@font-face {
+  font-family: 'Panchang-Extralight';
+  src: url('../fonts/Panchang-Extralight.woff2') format('woff2'),
+       url('../fonts/Panchang-Extralight.woff') format('woff'),
+       url('../fonts/Panchang-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang-Light';
+  src: url('../fonts/Panchang-Light.woff2') format('woff2'),
+       url('../fonts/Panchang-Light.woff') format('woff'),
+       url('../fonts/Panchang-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang-Regular';
+  src: url('../fonts/Panchang-Regular.woff2') format('woff2'),
+       url('../fonts/Panchang-Regular.woff') format('woff'),
+       url('../fonts/Panchang-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang-Medium';
+  src: url('../fonts/Panchang-Medium.woff2') format('woff2'),
+       url('../fonts/Panchang-Medium.woff') format('woff'),
+       url('../fonts/Panchang-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang-Semibold';
+  src: url('../fonts/Panchang-Semibold.woff2') format('woff2'),
+       url('../fonts/Panchang-Semibold.woff') format('woff'),
+       url('../fonts/Panchang-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang-Bold';
+  src: url('../fonts/Panchang-Bold.woff2') format('woff2'),
+       url('../fonts/Panchang-Bold.woff') format('woff'),
+       url('../fonts/Panchang-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang-Extrabold';
+  src: url('../fonts/Panchang-Extrabold.woff2') format('woff2'),
+       url('../fonts/Panchang-Extrabold.woff') format('woff'),
+       url('../fonts/Panchang-Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 800.0;
+*
+* available axes:
+'wght' (range from 200.0 to 800.0
+*/
+@font-face {
+  font-family: 'Panchang-Variable';
+  src: url('../fonts/Panchang-Variable.woff2') format('woff2'),
+       url('../fonts/Panchang-Variable.woff') format('woff'),
+       url('../fonts/Panchang-Variable.ttf') format('truetype');
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Light';
+  src: url('../fonts/SpaceGrotesk-Light.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-Light.woff') format('woff'),
+       url('../fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk-Regular';
+  src: url('../fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-Regular.woff') format('woff'),
+       url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk-Medium';
+  src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-Medium.woff') format('woff'),
+       url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk-SemiBold';
+  src: url('../fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-SemiBold.woff') format('woff'),
+       url('../fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk-Bold';
+  src: url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-Bold.woff') format('woff'),
+       url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Variable';
+  src: url('../fonts/SpaceGrotesk-Variable.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-Variable.woff') format('woff'),
+       url('../fonts/SpaceGrotesk-Variable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+  font-style: normal;
+}
 
 
 /* header en nav */
@@ -47,6 +183,18 @@ header nav button:hover {
 
 /*section me */
 
+h1{
+  font-family: 'Panchang-Medium', Arial;
+}
+
+p{
+  font-family: 'SpaceGrotesk-Regular', Arial;
+}
+
+button{
+  font-family: 'Panchang-Regular', Arial;
+}
+
 .me{
     margin: 5em 10em;
     position: relative;
@@ -64,6 +212,28 @@ header nav button:hover {
     transition: 300ms;
     position: relative;
     cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .me {
+        margin: 2em;
+    }
+
+    .me button {
+        margin: 1em 0;
+        padding: .5em;
+    }
+
+    #toggle-carousel {
+        margin: 1em 0;
+        padding: .5em;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* ...existing code... */
@@ -107,21 +277,30 @@ header nav button:hover {
     display: none;
     position: relative;
     margin-top: 1em;
-  }
-  
-  .carousel {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition for opacity and transform */
+}
+
+.dropdown.active {
+    display: block;
+    opacity: 1; /* Ensure the dropdown becomes visible */
+    transform: translateY(0); /* Move to its correct place */
+}
+
+.carousel {
     display: flex;
     overflow: hidden;
     width: 100%;
     position: relative; /* Add this line */
-  }
-  
-  .carousel-item {
+}
+
+.carousel-item {
     min-width: 100%;
     transition: transform 0.5s ease;
-  }
-  
-  .carousel-control {
+}
+
+.carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -131,14 +310,14 @@ header nav button:hover {
     padding: 0.5em;
     cursor: pointer;
     z-index: 1; /* Add this line */
-  }
-  
-  .carousel-control-prev {
+}
+
+.carousel-control-prev {
     left: 0; /* Adjust positioning to be inside the carousel */
-  }
-  
-  .carousel-control-next {
+}
+
+.carousel-control-next {
     right: 0; /* Adjust positioning to be inside the carousel */
-  }
+}
 
 
