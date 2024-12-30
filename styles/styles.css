@@ -66,5 +66,44 @@ header nav button:hover {
     cursor: pointer;
 }
 
+/* ...existing code... */
+
+.dropdown {
+    display: none;
+    position: relative;
+    margin-top: 1em;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative; /* Add this line */
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+    z-index: 1; /* Add this line */
+  }
+  
+  .carousel-control.prev {
+    left: 0;
+  }
+  
+  .carousel-control.next {
+    right: 0;
+  }
 
 
