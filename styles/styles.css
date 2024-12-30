@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url('/images/background-dark.png');
+    background-image: url('../images/background-dark.png');
     background-size: cover;
     background-repeat: no-repeat; /* Prevent the background from repeating */
     background-attachment: fixed; /* Ensure the background stays fixed during scroll */
