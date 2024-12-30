@@ -1,0 +1,63 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body{
+    background-image: url('/images/background-dark.png');
+    background-size: cover;
+    color: white;
+}
+
+/* fonts */
+
+
+
+/* header en nav */
+
+header nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav button {
+    background: none;
+    border: 2px solid white;
+    margin: 1em;
+    padding: .5em 1em;
+    border-radius: 1.5em;
+    color: white;
+
+    transition: 300ms;
+}
+
+header nav button:hover {
+    background-color: white;
+    color: black;
+}
+
+/*section me */
+
+.me{
+    margin: 5em 10em;
+}
+
+.me button{
+    background: none;
+    border: 2px solid white;
+
+    margin: 1.5em 0;
+    padding: .5em 1em;
+    border-radius: 1.5em;
+    color: white;
+
+    transition: 300ms;
+}
+
+.me button:hover {
+    background-color: white;
+    color: black;
+}
