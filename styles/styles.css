@@ -9,6 +9,8 @@
 body{
     background-image: url('/images/background-dark.png');
     background-size: cover;
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Ensure the background stays fixed during scroll */
     color: white;
 }
 
@@ -43,6 +45,7 @@ header nav button:hover {
 
 .me{
     margin: 5em 10em;
+    position: relative;
 }
 
 .me button{
@@ -55,9 +58,146 @@ header nav button:hover {
     color: white;
 
     transition: 300ms;
+    position: relative;
+    cursor: pointer;
 }
 
-.me button:hover {
+.me .dropdown > button::after {
+    content: '▼';
+    font-size: 0.8em;
+    margin-left: 0.5em;
+    transition: transform 300ms;
+}
+
+.me .dropdown > button:hover {
     background-color: white;
     color: black;
 }
+
+.me .dropdown > button:hover::after {
+    transform: rotate(180deg);
+}
+
+.me p:last-of-type{
+    margin: 1em 0 0;
+}
+
+.me .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.me .dropdown-content {
+    display: none;
+    position: absolute; /* Change to absolute to position relative to the button */
+    background-color: #333;
+    width: 78vw; /* Reduced width */
+    height: 78vh; /* Reduced height */
+    top: 100%; /* Position below the button */
+    left: 0; /* Align with the button */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    transform: translateY(-10px);
+}
+
+.me .dropdown-content.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.me .carousel {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.me .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start off-screen to the right */
+    opacity: 0;
+    z-index: 0; /* Ensure proper stacking */
+    background-color: transparent; /* Ensure background is transparent */
+}
+
+.me .carousel-item.active {
+    left: 0; /* Move to the visible area */
+    opacity: 1;
+    z-index: 1; /* Bring to front */
+}
+
+.me .carousel-item.prev {
+    left: -100%; /* Move off-screen to the left */
+    opacity: 0;
+    z-index: 0; /* Send to back */
+}
+
+.me .carousel-item.next {
+    left: 100%; /* Move off-screen to the right */
+    opacity: 0;
+    z-index: 0; /* Send to back */
+}
+
+.me .carousel img {
+    width: 80%;
+    height: auto;
+}
+
+.me .carousel p {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.me .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure buttons are above carousel items */
+}
+
+.me .carousel-controls button {
+    background: rgba(0, 0, 0, 0.5); /* Add background for visibility */
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0.5em; /* Add padding for better click area */
+}
+
+.me .dropdown-content img {
+    width: 100%;
+    height: auto;
+}
+
+.me .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.me .dropdown-content a:hover {
+    background-color: #444; /* Example color */
+}
+
+/* Remove this rule to prevent hover from interfering with click */
+/* .me .dropdown:hover .dropdown-content {
+    display: block;
+} */
+
