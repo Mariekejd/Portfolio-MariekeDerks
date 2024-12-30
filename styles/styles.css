@@ -32,7 +32,7 @@ header nav{
 header nav button {
     background: none;
     border: 2px solid white;
-    margin: 1em;
+    margin: 1.5em .7em;
     padding: .5em 1em;
     border-radius: 1.5em;
     color: white;
@@ -68,6 +68,41 @@ header nav button:hover {
 
 /* ...existing code... */
 
+#toggle-carousel {
+    background: none;
+    border: 2px solid white;
+    margin: 1.5em 0;
+    padding: .5em 1em;
+    border-radius: 1.5em;
+    color: white;
+    transition: 300ms;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toggle-carousel::after {
+    content: '';
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 0.5em;
+    transform: rotate(-135deg); /* Change to point upwards */
+}
+
+#toggle-carousel.active {
+    background-color: white;
+    color: black;
+}
+
+#toggle-carousel.active::after {
+    transform: rotate(45deg); /* Change to point downwards */
+    border-color: black; /* Ensure the arrow remains visible */
+}
+
 .dropdown {
     display: none;
     position: relative;
@@ -98,12 +133,12 @@ header nav button:hover {
     z-index: 1; /* Add this line */
   }
   
-  .carousel-control.prev {
-    left: 0;
+  .carousel-control-prev {
+    left: 0; /* Adjust positioning to be inside the carousel */
   }
   
-  .carousel-control.next {
-    right: 0;
+  .carousel-control-next {
+    right: 0; /* Adjust positioning to be inside the carousel */
   }
 
 
