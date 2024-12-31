@@ -397,7 +397,7 @@ button{
 
 /* Section 2: Highlights */
 
-.highlights {
+section {
     margin: 5em 10em; /* Add this line */
     margin-top: 7em;
 }
@@ -580,5 +580,11 @@ body.dialog-open {
   overflow: hidden;
 }
 
-/* ...existing code... */
+/* section 3: projects */
+
+.projects h2 {
+  margin-bottom: 1em; /* Add some space below the heading */
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+}
 
