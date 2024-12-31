@@ -12,6 +12,8 @@ body{
     background-repeat: no-repeat; /* Prevent the background from repeating */
     background-attachment: fixed; /* Ensure the background stays fixed during scroll */
     color: white;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
 }
 
 img{
@@ -197,7 +199,15 @@ button{
 
 .me{
     margin: 5em 10em;
+    margin-bottom: 2em;
     position: relative;
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+    justify-content: space-between; /* Add this line */
+}
+
+.me p{
+  margin-top: 1em;
 }
 
 .me button{
@@ -214,10 +224,31 @@ button{
     cursor: pointer;
 }
 
+.me .profile {
+    max-width: 200px; /* Adjust the size to be smaller */
+    border-radius: 50%; /* Make it circular */
+    margin-left: 2em; /* Add some space between the text and image */
+}
+
+#carousel-container {
+    margin: 1em 10em; /* Add this line */
+}
+
+#toggle-carousel{
+  margin: 0 12em;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .me {
         margin: 2em;
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .me .profile {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-bottom: 1em; /* Add bottom margin for spacing */
     }
 
     .me button {
@@ -225,9 +256,8 @@ button{
         padding: .5em;
     }
 
-    #toggle-carousel {
-        margin: 1em 0;
-        padding: .5em;
+    #toggle-carousel, #carousel-container {
+        margin: 2em; /* Add this line */
     }
 
     .carousel-item img {
@@ -241,7 +271,6 @@ button{
 #toggle-carousel {
     background: none;
     border: 2px solid white;
-    margin: 1.5em 0;
     padding: .5em 1em;
     border-radius: 1.5em;
     color: white;
@@ -301,23 +330,41 @@ button{
 }
 
 .carousel-control {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: .5em 1em;
+    border-radius: 1.5em;
+    transition: 300ms;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 0.5em;
     cursor: pointer;
     z-index: 1; /* Add this line */
 }
 
-.carousel-control-prev {
+.carousel-control:hover {
+    background-color: white;
+    color: black;
+}
+
+.carousel-control.prev {
     left: 0; /* Adjust positioning to be inside the carousel */
 }
 
-.carousel-control-next {
+.carousel-control.next {
     right: 0; /* Adjust positioning to be inside the carousel */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 

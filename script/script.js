@@ -1,6 +1,8 @@
 console.log("help")
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = '1'; // Ensure the body is visible after the animation
+
     const toggleButton = document.getElementById('toggle-carousel');
     const carouselContainer = document.getElementById('carousel-container');
 
@@ -31,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
 
-    document.querySelector('.carousel-control-next').addEventListener('click', function() {
+    document.querySelector('.carousel-control.next').addEventListener('click', function() {
         const items = document.querySelectorAll('.carousel-item');
         currentIndex = (currentIndex + 1) % items.length;
         updateCarousel();
     });
 
-    document.querySelector('.carousel-control-prev').addEventListener('click', function() {
+    document.querySelector('.carousel-control.prev').addEventListener('click', function() {
         const items = document.querySelectorAll('.carousel-item');
         currentIndex = (currentIndex - 1 + items.length) % items.length;
         updateCarousel();
@@ -50,4 +52,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
