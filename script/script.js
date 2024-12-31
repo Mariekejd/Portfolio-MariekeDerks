@@ -68,16 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
     closeDialogButtons.forEach(button => {
         button.addEventListener('click', () => {
             const dialog = button.closest('dialog');
-            dialog.close();
-            document.body.classList.remove('dialog-open');
+            dialog.setAttribute('closing', '');
+            dialog.addEventListener('animationend', () => {
+                dialog.removeAttribute('closing');
+                dialog.close();
+                document.body.classList.remove('dialog-open');
+            }, { once: true });
         });
     });
 
     dialogs.forEach(dialog => {
         dialog.addEventListener('click', (event) => {
             if (event.target === dialog) {
-                dialog.close();
-                document.body.classList.remove('dialog-open');
+                dialog.setAttribute('closing', '');
+                dialog.addEventListener('animationend', () => {
+                    dialog.removeAttribute('closing');
+                    dialog.close();
+                    document.body.classList.remove('dialog-open');
+                }, { once: true });
             }
         });
     });
@@ -86,8 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('close-dialog')) {
             const dialog = event.target.closest('dialog');
-            dialog.close();
-            document.body.classList.remove('dialog-open');
+            dialog.setAttribute('closing', '');
+            dialog.addEventListener('animationend', () => {
+                dialog.removeAttribute('closing');
+                dialog.close();
+                document.body.classList.remove('dialog-open');
+            }, { once: true });
         }
     });
 });
