@@ -294,8 +294,6 @@ button{
     }
 }
 
-/* ...existing code... */
-
 #toggle-carousel {
     background: none;
     border: 2px solid white;
@@ -482,8 +480,6 @@ section {
     }
 }
 
-/* ...existing code... */
-
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
@@ -561,8 +557,6 @@ dialog::backdrop {
   position: relative;
 }
 
-/* ...existing code... */
-
 .close-dialog {
   color: black;
   position: absolute;
@@ -582,9 +576,32 @@ body.dialog-open {
 
 /* section 3: projects */
 
-.projects h2 {
+.allprojects h2 {
   margin-bottom: 1em; /* Add some space below the heading */
   border-bottom: 1px solid white;
   padding-bottom: 1em;
 }
+
+/* Section 3: Projects */
+
+.allprojects {
+  margin: 5em 10em; /* Add this line */
+  margin-top: 7em;
+}
+
+.allprojects h2 {
+  margin-bottom: 1em; /* Add some space below the heading */
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .allprojects {
+    margin: 2em; /* Adjust margin for small screens */
+  }
+}
+
+
 
