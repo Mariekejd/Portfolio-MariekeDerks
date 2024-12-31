@@ -482,4 +482,45 @@ button{
     }
 }
 
-/* Dialog styles */
+/* ...existing code... */
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dialog-content {
+  position: relative;
+}
+
+/* ...existing code... */
+
+.close-dialog {
+  color: black;
+  position: absolute;
+  top: -40px; /* Move the button a bit more up */
+  right: -25px;
+  cursor: pointer;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  padding: 0.5em; /* Add padding to ensure it is clickable */
+  margin: 0; /* Ensure no margin */
+}
+
+body.dialog-open {
+  overflow: hidden;
+}
+
+/* ...existing code... */
+

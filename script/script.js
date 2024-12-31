@@ -52,34 +52,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Dialog functionality
     const openDialogButtons = document.querySelectorAll('.open-dialog');
     const closeDialogButtons = document.querySelectorAll('.close-dialog');
-    const dialogs = document.querySelectorAll('.dialog');
+    const dialogs = document.querySelectorAll('dialog');
 
     openDialogButtons.forEach(button => {
         button.addEventListener('click', () => {
             const dialogId = button.getAttribute('data-dialog');
             const dialog = document.getElementById(dialogId);
-            dialog.style.display = 'flex';
-            document.body.classList.add('dialog-open'); // Add class to body
+            dialog.showModal();
+            document.body.classList.add('dialog-open');
         });
     });
 
     closeDialogButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const dialog = button.closest('.dialog');
-            dialog.style.display = 'none';
-            document.body.classList.remove('dialog-open'); // Remove class from body
+            const dialog = button.closest('dialog');
+            dialog.close();
+            document.body.classList.remove('dialog-open');
         });
     });
 
-    window.addEventListener('click', (event) => {
-        dialogs.forEach(dialog => {
+    dialogs.forEach(dialog => {
+        dialog.addEventListener('click', (event) => {
             if (event.target === dialog) {
-                dialog.style.display = 'none';
-                document.body.classList.remove('dialog-open'); // Remove class from body
+                dialog.close();
+                document.body.classList.remove('dialog-open');
             }
         });
     });
+
+    // Ensure close button works after dynamically adding event listeners
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('close-dialog')) {
+            const dialog = event.target.closest('dialog');
+            dialog.close();
+            document.body.classList.remove('dialog-open');
+        }
+    });
 });
+
+
+
+
