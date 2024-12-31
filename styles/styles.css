@@ -159,6 +159,25 @@ img{
   font-style: normal;
 }
 
+/* button */
+
+button {
+  background: none;
+  margin-top: 1em;
+  border: 2px solid white;
+  padding: .5em 1em;
+  border-radius: 1.5em;
+  color: white;
+
+  transition: 300ms;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+
 
 /* header en nav */
 
@@ -185,7 +204,7 @@ header nav button:hover {
 
 /*section me */
 
-h1{
+h1, h2, h3{
   font-family: 'Panchang-Medium', Arial;
 }
 
@@ -263,6 +282,15 @@ button{
     .carousel-item img {
         width: 100%;
         height: auto;
+    }
+
+    .highlights {
+        flex-direction: column; /* Stack items vertically on small screens */
+        margin: 2em; /* Adjust margin for small screens */
+    }
+
+    .highlights div {
+        margin: 1em 0; /* Adjust margin for small screens */
     }
 }
 
@@ -366,5 +394,94 @@ button{
         transform: translateY(0);
     }
 }
+
+/* Section 2: Highlights */
+
+.highlights {
+    margin: 5em 10em; /* Add this line */
+    margin-top: 7em;
+}
+
+.highlights h2 {
+    margin-bottom: 1em; /* Add some space below the heading */
+    border-bottom: 1px solid white;
+    padding-bottom: 1em;
+}
+
+.highlights h3{
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.highlights .projects {
+    display: flex; /* Add this line */
+    justify-content: space-between; /* Add this line */
+}
+
+.highlights .projects > div {
+    flex: 1; /* Add this line */
+    margin: 0 1em; /* Add this line */
+    padding: 1em; /* Add padding for card content */
+    border-radius: 10px; /* Add border radius for card effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for card effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.highlights .projects > div:hover {
+    transform: translateY(-10px); /* Move the div up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+}
+
+.highlights img {
+    width: 100%; /* Ensure images take full width of their container */
+    border-radius: 10px; /* Optional: Add some border radius for styling */
+}
+
+.highlights .projects > div:nth-of-type(3) img{
+  margin-bottom: .5em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .me {
+        margin: 2em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .me .profile {
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .me button {
+        margin: 1em 0;
+        padding: .5em;
+    }
+
+    #toggle-carousel, #carousel-container {
+        margin: 2em;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .highlights {
+        margin: 2em; /* Adjust margin for small screens */
+    }
+
+    .highlights .projects {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .highlights .projects > div {
+        margin: 1em 0; /* Adjust margin for small screens */
+    }
+}
+
+/* ...existing code... */
 
 
