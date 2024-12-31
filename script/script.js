@@ -51,6 +51,35 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.transform = `translateX(-${currentIndex * 100}%)`;
         });
     }
+
+    // Dialog functionality
+    const openDialogButtons = document.querySelectorAll('.open-dialog');
+    const closeDialogButtons = document.querySelectorAll('.close-dialog');
+    const dialogs = document.querySelectorAll('.dialog');
+
+    openDialogButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const dialogId = button.getAttribute('data-dialog');
+            const dialog = document.getElementById(dialogId);
+            dialog.style.display = 'flex';
+            document.body.classList.add('dialog-open'); // Add class to body
+        });
+    });
+
+    closeDialogButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const dialog = button.closest('.dialog');
+            dialog.style.display = 'none';
+            document.body.classList.remove('dialog-open'); // Remove class from body
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        dialogs.forEach(dialog => {
+            if (event.target === dialog) {
+                dialog.style.display = 'none';
+                document.body.classList.remove('dialog-open'); // Remove class from body
+            }
+        });
+    });
 });
-
-

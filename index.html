@@ -19,13 +19,26 @@
         <div>
           <h1>Marieke Derks</h1>
           <p>
-            Hoi! Ik ben Marieke, 19 jaar en tweedejaars student Communicatie en Multimedia Design aan de HvA. Ik heb een passie voor creativiteit en design, en ik ontwikkel mezelf nu met veel plezier op het gebied van coderen. Binnenkort start ik met het project Techniek, waar ik nog meer de diepte in ga met programmeren.
+            Hoi! Ik ben Marieke, 19 jaar en tweedejaars student Communicatie en
+            Multimedia Design aan de HvA. Ik heb een passie voor creativiteit en
+            design, en ik ontwikkel mezelf nu met veel plezier op het gebied van
+            coderen. Binnenkort start ik met het project Techniek, waar ik nog
+            meer de diepte in ga met programmeren.
           </p>
-          <p>Verhalen inspireren mij enorm, of het nu gaat om cinema, boeken, games of muziek. Alles wat een verhaal vertelt, trekt mijn aandacht, en mijn brede interesse in deze onderdelen is een grote bron van inspiratie. Naast design en storytelling teken ik graag en leg ik momenten vast in mijn favoriete storymode games. Hieronder vind je een aantal van mijn favoriete captures.
-            <br> <br>
-            Buiten mijn creatieve bezigheden ben ik ook betrokken bij mijn volleybal vereniging waarin ik met anderen het social media account beheer.</p>
+          <p>
+            Verhalen inspireren mij enorm, of het nu gaat om cinema, boeken,
+            games of muziek. Alles wat een verhaal vertelt, trekt mijn aandacht,
+            en mijn brede interesse in deze onderdelen is een grote bron van
+            inspiratie. Naast design en storytelling teken ik graag en leg ik
+            momenten vast in mijn favoriete storymode games. Hieronder vind je
+            een aantal van mijn favoriete captures. <br />
+            <br />
+            Buiten mijn creatieve bezigheden ben ik ook betrokken bij mijn
+            volleybal vereniging waarin ik met anderen het social media account
+            beheer.
+          </p>
         </div>
-        <img class="profile" src="./images/cat-hat.jpg" alt="test">
+        <img class="profile" src="./images/cat-hat.jpg" alt="test" />
       </section>
 
       <button id="toggle-carousel">My game captures</button>
@@ -63,23 +76,64 @@
         <div class="projects">
           <div>
             <h3>Kurt Cobain poster</h3>
-            <img src="./images/kurt-cobain_grunge.jpg" alt="kurt cobain poster">
-            <button>Lees meer</button>
+            <img
+              src="./images/kurt-cobain_grunge.jpg"
+              alt="kurt cobain poster"
+            />
+            <button class="open-dialog" data-dialog="dialog1">Lees meer</button>
           </div>
           <div>
             <h3>Replica Web: Playstation</h3>
-            <img src="./images/playstation-replica.png" alt="my playstation site version">
-            <button>Lees meer</button>
+            <img
+              src="./images/playstation-replica.png"
+              alt="my playstation site version"
+            />
+            <button class="open-dialog" data-dialog="dialog2">Lees meer</button>
           </div>
           <div>
             <h3>De creatieve redders</h3>
-            <img src="./images/workshop1.jpeg" alt="creatieve redders project">
-            <img src="./images/workshop2.jpeg" alt="creatieve redders project">
-            <img src="./images/workshop4.jpg" alt="creatieve redders project">
-            <button>Lees meer</button>
+            <img
+              src="./images/workshop1.jpeg"
+              alt="creatieve redders project"
+            />
+            <img
+              src="./images/workshop2.jpeg"
+              alt="creatieve redders project"
+            />
+            <img src="./images/workshop4.jpg" alt="creatieve redders project" />
+            <button class="open-dialog" data-dialog="dialog3">Lees meer</button>
           </div>
         </div>
       </section>
+
+      <!-- Dialogs -->
+      <div id="dialog1" class="dialog">
+        <div class="dialog-content">
+          <span class="close-dialog">&times;</span>
+          <h2>Kurt Cobain poster</h2>
+          <p>Vak: Ontwerpgeschiedenis
+            <br>Tijdens dit vak maakte ik een boekje vol theorie, opdrachten en sketchnotes over verschillende kunststromingen. Een van de opdrachten was het ontwerpen van een poster van een favoriete artiest binnen een gekozen stroming. Ik koos voor Kurt Cobain en creëerde een poster in de grunge-stijl. Dit ontwerp blijft een van mijn persoonlijke favorieten, en ik toon het hier met trots.</p>
+        </div>
+      </div>
+
+      <div id="dialog2" class="dialog">
+        <div class="dialog-content">
+          <span class="close-dialog">&times;</span>
+          <h2>Replica Web: Playstation</h2>
+          <p> Vak: Frontend development
+            <br>In het tweede jaar van mijn studie combineerde ik HTML, CSS en JavaScript om een bestaande website na te maken. Ik koos de PlayStation-website, met de focus op de pagina's van de game The Last of Us. Ik begon met een mobiele versie en koos ervoor om de site responsive te maken, zodat deze op verschillende schermformaten goed functioneert. Dit project gaf mij een diepgaand inzicht in responsive design en de praktische toepassing ervan in moderne webontwikkeling.</p>
+        </div>
+      </div>
+
+      <div id="dialog3" class="dialog">
+        <div class="dialog-content">
+          <span class="close-dialog">&times;</span>
+          <h2>De creatieve redders</h2>
+          <p>Vak: Passieproject <br>
+            Het Passieproject was een unieke uitdaging, waarbij de focus minder lag op coderen of vormgeven en meer op conceptontwikkeling en prototyping. Samen met drie medestudenten ontwikkelde ik De Creatieve Redders, een initiatief om bovenbouwleerlingen op basisscholen te leren knutselen met afvalmaterialen. Ons doel was kinderen bewust te maken van duurzaamheid en hen aan te moedigen creativiteit in te zetten voor een goed doel.
+            Voor de uitvoering bezochten we een basisschool, waar we workshops gaven. Als eindexpositie transformeerden we een kleine kamer in een "zee" vol knutselwerken van afval, zoals dieren gemaakt van plastic. Deze tentoonstelling diende als inspiratie voor scholen om ons programma te adopteren. Het was een intens project van drie weken, maar een waar ik met trots op terugkijk.</p>
+        </div>
+      </div>
     </main>
 
     <script defer src="./script/script.js"></script>
