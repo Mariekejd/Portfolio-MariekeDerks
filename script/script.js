@@ -104,6 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// open project info
+
+
 
 
 
