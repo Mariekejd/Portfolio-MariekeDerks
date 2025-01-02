@@ -487,44 +487,9 @@ dialog::backdrop {
 @keyframes dialogFadeIn {
   from {
     opacity: 0;
-    transform: scale(0.8);
   }
   to {
     opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes dialogSlideIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 100%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes dialogSlideOut {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, 100%);
-  }
-}
-
-@keyframes dialogSlideUpFadeIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 20%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -538,19 +503,21 @@ dialog::backdrop {
 }
 
 .dialog {
-  border: none;
-  border-radius: 10px;
-  padding: 2em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: dialogSlideUpFadeIn 0.3s ease-out;
+    background: #3F3536; /* Set background color */
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 2em;
+    box-shadow: 0 0 10px #FFD4F7, 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow glow effect */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: dialogFadeIn 0.3s ease-out; /* Use fade-in animation */
 }
 
 .dialog[closing] {
-  animation: dialogFadeOut 0.3s ease-out;
+    animation: dialogFadeOut 0.3s ease-out;
 }
 
 .dialog-content {
@@ -558,16 +525,24 @@ dialog::backdrop {
 }
 
 .close-dialog {
-  color: black;
-  position: absolute;
-  top: -40px; /* Move the button a bit more up */
-  right: -25px;
-  cursor: pointer;
-  font-size: 1.5em;
-  background: none;
-  border: none;
-  padding: 0.5em; /* Add padding to ensure it is clickable */
-  margin: 0; /* Ensure no margin */
+    display: inline-block;
+    background: #3F3536; /* Set background color */
+    padding: 0.2em 0.5em; /* Reduce padding */
+    border-radius: 1.5em;
+    color: white;
+    text-decoration: none;
+    transition: 300ms;
+    position: absolute;
+    top: -50px; /* Move the button a bit more up */
+    right: -25px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border: none; /* Remove border */
+}
+
+.close-dialog:hover {
+    color: #FFD4F7;
+    background: none;
 }
 
 body.dialog-open {
@@ -595,12 +570,101 @@ body.dialog-open {
   padding-bottom: 1em;
 }
 
+.allprojects div{
+  padding: 1em;
+  font-family: 'Panchang-Medium', Arial;
+  margin-bottom: 1em;
+  border: 1px solid white;
+  display: flex; /* Add this line */
+  justify-content: space-between; /* Add this line */
+  align-items: center; /* Add this line */
+  border-radius: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.allprojects div:hover {
+  transform: scale(1.05); /* Scale the div slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+}
+
+.allprojects a {
+    display: inline-block;
+    background: #3F3536; /* Set background color */
+    border: 2px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    color: white;
+    text-decoration: none;
+    transition: 300ms;
+    margin-top: 1em;
+    margin-left: auto; /* Add this line */
+    position: relative; /* Add this line */
+    box-shadow: 0 0 10px #FFD4F7; /* Add shadow glow effect */
+}
+
+.allprojects a::after {
+    content: '➔'; /* Replace triangle with arrow */
+    font-size: 1.2em; /* Adjust the size as needed */
+    position: absolute; /* Add this line */
+    top: 50%; /* Add this line */
+    left: 50%; /* Add this line */
+    transform: translate(-50%, -50%); /* Center the arrow */
+    color: #FFD4F7; /* Set arrow color */
+}
+
+.allprojects a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 20px #FFD4F7; /* Enhance shadow glow effect on hover */
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
   .allprojects {
     margin: 2em; /* Adjust margin for small screens */
   }
+}
+
+.contact {
+  margin: 12em 10em;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 1em;
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  background: #3F3536;
+  border: 2px solid white;
+  padding: 1em 2em;
+  border-radius: 1.5em;
+  color: white;
+  text-decoration: none;
+  transition: 300ms;
+  box-shadow: 0 0 10px #FFD4F7;
+}
+
+.contact-link img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5em;
+}
+
+.contact-link:hover {
+  color: #FFD4F7;
+  box-shadow: 0 0 20px #FFD4F7;
 }
 
 
