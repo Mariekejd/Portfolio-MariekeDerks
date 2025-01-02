@@ -478,6 +478,34 @@ section {
     .highlights .projects > div {
         margin: 1em 0; /* Adjust margin for small screens */
     }
+
+    .allprojects {
+        margin: 2em; /* Adjust margin for small screens */
+    }
+
+    .contact {
+        margin: 2em; /* Adjust margin for small screens */
+    }
+
+    .contact h2 {
+        font-size: 1.5em; /* Adjust font size for small screens */
+        padding-bottom: 0.5em; /* Adjust padding for small screens */
+    }
+
+    .contact-links {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 1em; /* Adjust gap for small screens */
+    }
+
+    .contact-link {
+        padding: 1em; /* Reduce padding for small screens */
+        width: 100%; /* Ensure button size */
+        justify-content: center; /* Center content */
+    }
+
+    .contact-link img {
+        margin-right: 0.5em;
+    }
 }
 
 dialog::backdrop {
@@ -649,7 +677,7 @@ body.dialog-open {
   background: #3F3536;
   border: 2px solid white;
   padding: 1em 2em;
-  border-radius: 1.5em;
+  border-radius: 2em;
   color: white;
   text-decoration: none;
   transition: 300ms;
@@ -665,6 +693,75 @@ body.dialog-open {
 .contact-link:hover {
   color: #FFD4F7;
   box-shadow: 0 0 20px #FFD4F7;
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .me {
+    margin: 2em;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .me .profile {
+    margin-left: 0; /* Remove left margin on small screens */
+    margin-bottom: 1em; /* Add bottom margin for spacing */
+  }
+
+  .me button {
+    margin: 1em 0;
+    padding: .5em;
+  }
+
+  #toggle-carousel, #carousel-container {
+    margin: 2em;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .highlights {
+    margin: 2em; /* Adjust margin for small screens */
+  }
+
+  .highlights .projects {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .highlights .projects > div {
+    margin: 1em 0; /* Adjust margin for small screens */
+  }
+
+  .allprojects {
+    margin: 2em; /* Adjust margin for small screens */
+  }
+
+  .contact {
+    margin: 2em; /* Adjust margin for small screens */
+  }
+
+  .contact h2 {
+    font-size: 1.5em; /* Adjust font size for small screens */
+    padding-bottom: 0.5em; /* Adjust padding for small screens */
+  }
+
+  .contact-links {
+    flex-direction: column; /* Stack items vertically on small screens */
+    gap: 1em; /* Adjust gap for small screens */
+  }
+
+  .contact-link {
+    padding: 1em; /* Reduce padding for small screens */
+    width: auto; /* Ensure button size */
+    justify-content: center; /* Center content */
+  }
+
+  .contact-link img {
+    margin-right: 0.5em;
+  }
 }
 
 
