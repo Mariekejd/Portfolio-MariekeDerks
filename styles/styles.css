@@ -9,8 +9,8 @@
 body{
     background-image: url('../images/background-dark.png');
     background-size: cover;
-    background-repeat: no-repeat; /* Prevent the background from repeating */
-    background-attachment: fixed; /* Ensure the background stays fixed during scroll */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     opacity: 0;
     animation: fadeInUp 1s ease-in-out forwards;
@@ -19,8 +19,6 @@ body{
 img{
     width: 100%;
 }
-
-/* fonts */
 
 @font-face {
   font-family: 'Panchang-Extralight';
@@ -85,14 +83,6 @@ img{
   font-display: swap;
   font-style: normal;
 }
-/**
-* This is a variable font
-* You can control variable axes as shown below:
-* font-variation-settings: wght 800.0;
-*
-* available axes:
-'wght' (range from 200.0 to 800.0
-*/
 @font-face {
   font-family: 'Panchang-Variable';
   src: url('../fonts/Panchang-Variable.woff2') format('woff2'),
@@ -159,8 +149,6 @@ img{
   font-style: normal;
 }
 
-/* button */
-
 button {
   background: none;
   margin-top: 1em;
@@ -176,10 +164,6 @@ button:hover {
   background-color: white;
   color: black;
 }
-
-
-
-/* header en nav */
 
 header nav{
     display: flex;
@@ -205,7 +189,7 @@ header nav button:hover {
 }
 
 header nav .home-button {
-  margin-right: auto; /* Push the home button to the left */
+  margin-right: auto;
 }
 
 .home-button a:hover{
@@ -216,7 +200,6 @@ header nav .home-button {
   text-decoration: none;
   color: white;
 }
-/*section me */
 
 h1, h2, h3{
   font-family: 'Panchang-Medium', Arial;
@@ -234,9 +217,9 @@ button{
     margin: 5em 10em;
     margin-bottom: 2em;
     position: relative;
-    display: flex; /* Add this line */
-    align-items: center; /* Add this line */
-    justify-content: space-between; /* Add this line */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .me p{
@@ -258,203 +241,19 @@ button{
 }
 
 .me .profile {
-    max-width: 200px; /* Adjust the size to be smaller */
-    border-radius: 50%; /* Make it circular */
-    margin-left: 2em; /* Add some space between the text and image */
+    max-width: 200px;
+    border-radius: 50%;
+    margin-left: 2em;
 }
 
 #carousel-container {
-    margin: 1em 10em; /* Add this line */
+    margin: 1em 10em;
 }
 
 #toggle-carousel{
   margin: 0 12em;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .me {
-        margin: 2em;
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .me .profile {
-        margin-left: 0; /* Remove left margin on small screens */
-        margin-bottom: 1em; /* Add bottom margin for spacing */
-    }
-
-    .me button {
-        margin: 1em 0;
-        padding: .5em;
-    }
-
-    #toggle-carousel, #carousel-container {
-        margin: 2em; /* Add this line */
-    }
-
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .highlights {
-        flex-direction: column; /* Stack items vertically on small screens */
-        margin: 2em; /* Adjust margin for small screens */
-    }
-
-    .highlights div {
-        margin: 1em 0; /* Adjust margin for small screens */
-    }
-}
-
-#toggle-carousel {
-    background: none;
-    border: 2px solid white;
-    padding: .5em 1em;
-    border-radius: 1.5em;
-    color: white;
-    transition: 300ms;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#toggle-carousel::after {
-    content: '';
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-left: 0.5em;
-    transform: rotate(-135deg); /* Change to point upwards */
-}
-
-#toggle-carousel.active {
-    background-color: white;
-    color: black;
-}
-
-#toggle-carousel.active::after {
-    transform: rotate(45deg); /* Change to point downwards */
-    border-color: black; /* Ensure the arrow remains visible */
-}
-
-.dropdown {
-    display: none;
-    position: relative;
-    margin-top: 1em;
-    opacity: 0;
-    transform: translateY(-20px); /* Start slightly above */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition for opacity and transform */
-}
-
-.dropdown.active {
-    display: block;
-    opacity: 1; /* Ensure the dropdown becomes visible */
-    transform: translateY(0); /* Move to its correct place */
-}
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    position: relative; /* Add this line */
-}
-
-.carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-}
-
-.carousel-control {
-    background: none;
-    border: 2px solid white;
-    color: white;
-    padding: .5em 1em;
-    border-radius: 1.5em;
-    transition: 300ms;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 1; /* Add this line */
-}
-
-.carousel-control:hover {
-    background-color: white;
-    color: black;
-}
-
-.carousel-control.prev {
-    left: 0; /* Adjust positioning to be inside the carousel */
-}
-
-.carousel-control.next {
-    right: 0; /* Adjust positioning to be inside the carousel */
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Section 2: Highlights */
-
-section {
-    margin: 5em 10em; /* Add this line */
-    margin-top: 7em;
-}
-
-.highlights h2 {
-    margin-bottom: 1em; /* Add some space below the heading */
-    border-bottom: 1px solid white;
-    padding-bottom: 1em;
-}
-
-.highlights h3{
-  font-size: 1.1em;
-  margin-bottom: 1em;
-}
-
-.highlights .projects {
-    display: flex; /* Add this line */
-    justify-content: space-between; /* Add this line */
-}
-
-.highlights .projects > div {
-    flex: 1; /* Add this line */
-    margin: 0 1em; /* Add this line */
-    padding: 1em; /* Add padding for card content */
-    border-radius: 10px; /* Add border radius for card effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for card effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for hover effect */
-}
-
-.highlights .projects > div:hover {
-    transform: translateY(-10px); /* Move the div up slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-    background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
-}
-
-.highlights img {
-    width: 100%; /* Ensure images take full width of their container */
-    border-radius: 10px; /* Optional: Add some border radius for styling */
-}
-
-.highlights .projects > div:nth-of-type(3) img{
-  margin-bottom: .5em;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
     .me {
         margin: 2em;
@@ -482,58 +281,214 @@ section {
     }
 
     .highlights {
-        margin: 2em; /* Adjust margin for small screens */
+        flex-direction: column;
+        margin: 2em;
+    }
+
+    .highlights div {
+        margin: 1em 0;
+    }
+}
+
+#toggle-carousel {
+    background: none;
+    border: 2px solid white;
+    padding: .5em 1em;
+    border-radius: 1.5em;
+    color: white;
+    transition: 300ms;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toggle-carousel::after {
+    content: '';
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 0.5em;
+    transform: rotate(-135deg);
+}
+
+#toggle-carousel.active {
+    background-color: white;
+    color: black;
+}
+
+#toggle-carousel.active::after {
+    transform: rotate(45deg);
+    border-color: black;
+}
+
+.dropdown {
+    display: none;
+    position: relative;
+    margin-top: 1em;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.dropdown.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-control {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: .5em 1em;
+    border-radius: 1.5em;
+    transition: 300ms;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control:hover {
+    background-color: white;
+    color: black;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    margin: 5em 10em;
+    margin-top: 7em;
+}
+
+.highlights h2 {
+    margin-bottom: 1em;
+    border-bottom: 1px solid white;
+    padding-bottom: 1em;
+}
+
+.highlights h3{
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.highlights .projects {
+    display: flex;
+    justify-content: space-between;
+}
+
+.highlights .projects > div {
+    flex: 1;
+    margin: 0 1em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.highlights .projects > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.highlights img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.highlights .projects > div:nth-of-type(3) img{
+  margin-bottom: .5em;
+}
+
+@media (max-width: 768px) {
+    .me {
+        margin: 2em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .me .profile {
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .me button {
+        margin: 1em 0;
+        padding: .5em;
+    }
+
+    #toggle-carousel, #carousel-container {
+        margin: 2em;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .highlights {
+        margin: 2em;
     }
 
     .highlights .projects {
-        flex-direction: column; /* Stack items vertically on small screens */
+        flex-direction: column;
     }
 
     .highlights .projects > div {
-        margin: 1em 0; /* Adjust margin for small screens */
+        margin: 1em 0;
     }
 
     .allprojects {
-        margin: 2em; /* Adjust margin for small screens */
+        margin: 2em;
     }
 
     .codeprojects {
-        margin: 2em; /* Adjust margin for small screens */
+        margin: 2em;
     }
 
     .codeprojects div {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .codeprojects button {
-        margin-top: 1em; /* Adjust margin for small screens */
-        width: auto; /* Ensure button size */
-        text-align: center; /* Center text */
-    }
-
-    .contact {
-        margin: 2em; /* Adjust margin for small screens */
-    }
-
-    .contact h2 {
-        font-size: 1.5em; /* Adjust font size for small screens */
-        padding-bottom: 0.5em; /* Adjust padding for small screens */
-    }
-
-    .contact-links {
-        flex-direction: column; /* Stack items vertically on small screens */
-        gap: 1em; /* Adjust gap for small screens */
-    }
-
-    .contact-link {
-        padding: 1em; /* Reduce padding for small screens */
-        width: 100%; /* Ensure button size */
-        justify-content: center; /* Center content */
-    }
-
-    .contact-link img {
-        margin-right: 0.5em;
+        margin-top: 1em;
+        width: auto;
+        text-align: center;
     }
 }
 
@@ -560,17 +515,17 @@ dialog::backdrop {
 }
 
 .dialog {
-    background: #3F3536; /* Set background color */
+    background: #3F3536;
     color: white;
     border: 1px solid white;
     border-radius: 10px;
     padding: 2em;
-    box-shadow: 0 0 10px #FFD4F7, 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow glow effect */
+    box-shadow: 0 0 10px #FFD4F7, 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: dialogFadeIn 0.3s ease-out; /* Use fade-in animation */
+    animation: dialogFadeIn 0.3s ease-out;
 }
 
 .dialog[closing] {
@@ -583,18 +538,18 @@ dialog::backdrop {
 
 .close-dialog {
     display: inline-block;
-    background: #3F3536; /* Set background color */
-    padding: 0.2em 0.5em; /* Reduce padding */
+    background: #3F3536;
+    padding: 0.2em 0.5em;
     border-radius: 1.5em;
     color: white;
     text-decoration: none;
     transition: 300ms;
     position: absolute;
-    top: -50px; /* Move the button a bit more up */
+    top: -50px;
     right: -25px;
     cursor: pointer;
     font-size: 1.5em;
-    border: none; /* Remove border */
+    border: none;
 }
 
 .close-dialog:hover {
@@ -606,23 +561,19 @@ body.dialog-open {
   overflow: hidden;
 }
 
-/* section 3: projects */
-
 .allprojects h2 {
-  margin-bottom: 1em; /* Add some space below the heading */
+  margin-bottom: 1em;
   border-bottom: 1px solid white;
   padding-bottom: 1em;
 }
 
-/* Section 3: Projects */
-
 .allprojects {
-  margin: 5em 10em; /* Add this line */
+  margin: 5em 10em;
   margin-top: 7em;
 }
 
 .allprojects h2 {
-  margin-bottom: 1em; /* Add some space below the heading */
+  margin-bottom: 1em;
   border-bottom: 1px solid white;
   padding-bottom: 1em;
 }
@@ -632,22 +583,22 @@ body.dialog-open {
   font-family: 'Panchang-Medium', Arial;
   margin-bottom: 1em;
   border: 1px solid white;
-  display: flex; /* Add this line */
-  justify-content: space-between; /* Add this line */
-  align-items: center; /* Add this line */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 1em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .allprojects div:hover {
-  transform: scale(1.05); /* Scale the div slightly */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-  background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .allprojects a {
   display: inline-block;
-  background: #3F3536; /* Set background color */
+  background: #3F3536;
   border: 2px solid white;
   padding: 1em 1.5em;
   border-radius: 1.5em;
@@ -655,46 +606,45 @@ body.dialog-open {
   text-decoration: none;
   transition: 300ms;
   margin-top: 1em;
-  margin-left: auto; /* Add this line */
-  position: relative; /* Add this line */
-  box-shadow: 0 0 10px #FFD4F7; /* Add shadow glow effect */
+  margin-left: auto;
+  position: relative;
+  box-shadow: 0 0 10px #FFD4F7;
 }
 
 .allprojects a::after{
-  content: '➔'; /* Replace triangle with arrow */
-  font-size: 1.2em; /* Adjust the size as needed */
-  position: absolute; /* Add this line */
-  top: 50%; /* Add this line */
-  left: 50%; /* Add this line */
-  transform: translate(-50%, -50%); /* Center the arrow */
-  color: #FFD4F7; /* Set arrow color */
+  content: '➔';
+  font-size: 1.2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFD4F7;
 }
 
 .allprojects a:hover{
   background-color: white;
   color: black;
-  box-shadow: 0 0 20px #FFD4F7; /* Enhance shadow glow effect on hover */
+  box-shadow: 0 0 20px #FFD4F7;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .allprojects {
-    margin: 2em; /* Adjust margin for small screens */
+    margin: 2em;
   }
 
   .codeprojects {
-    margin: 2em; /* Adjust margin for small screens */
+    margin: 2em;
   }
 
   .codeprojects div {
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .codeprojects button {
-    margin-top: 1em; /* Adjust margin for small screens */
-    width: auto; /* Ensure button size */
-    text-align: center; /* Center text */
+    margin-top: 1em;
+    width: auto;
+    text-align: center;
   }
 }
 
@@ -745,17 +695,16 @@ body.dialog-open {
   transform: scale(1.05);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .me {
     margin: 2em;
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .me .profile {
-    margin-left: 0; /* Remove left margin on small screens */
-    margin-bottom: 1em; /* Add bottom margin for spacing */
+    margin-left: 0;
+    margin-bottom: 1em;
   }
 
   .me button {
@@ -773,47 +722,45 @@ body.dialog-open {
   }
 
   .highlights {
-    margin: 2em; /* Adjust margin for small screens */
+    margin: 2em;
   }
 
   .highlights .projects {
-    flex-direction: column; /* Stack items vertically on small screens */
+    flex-direction: column;
   }
 
   .highlights .projects > div {
-    margin: 1em 0; /* Adjust margin for small screens */
+    margin: 1em 0;
   }
 
   .allprojects {
-    margin: 2em; /* Adjust margin for small screens */
+    margin: 2em;
   }
 
   .contact {
-    margin: 2em; /* Adjust margin for small screens */
+    margin: 2em;
   }
 
   .contact h2 {
-    font-size: 1.5em; /* Adjust font size for small screens */
-    padding-bottom: 0.5em; /* Adjust padding for small screens */
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
   }
 
   .contact-links {
-    flex-direction: column; /* Stack items vertically on small screens */
-    gap: 1em; /* Adjust gap for small screens */
+    flex-direction: column;
+    gap: 1em;
   }
 
   .contact-link {
-    padding: 1em; /* Reduce padding for small screens */
-    width: auto; /* Ensure button size */
-    justify-content: center; /* Center content */
+    padding: 1em;
+    width: auto;
+    justify-content: center;
   }
 
   .contact-link img {
     margin-right: 0.5em;
   }
 }
-
-/* coding projects pagina 2*/
 
 .code-projects nav a{
   text-decoration: none;
@@ -830,14 +777,10 @@ body.dialog-open {
   }
 }
 
-/* section codeprojects */
-
 .code-projects h3 {
   font-family: 'Panchang-Medium', Arial;
   font-size: 1em;
 }
-
-/* div opmaak */
 
 .project-container{
   padding: 1em;
@@ -846,27 +789,26 @@ body.dialog-open {
   font-family: 'Panchang-Medium', Arial;
   margin-bottom: 1em;
   border: 1px solid white;
-  display: flex; /* Add this line */
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Add this line */
+  justify-content: space-between;
   border-radius: 1em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .project-container h3{
-
   font-size: 1.1em;
 }
 
 .project-container:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-  background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .project-container button {
   display: inline-block;
   top: -35px;
-  background: #3F3536; /* Set background color */
+  background: #3F3536;
   border: 2px solid white;
   padding: 1em 1.5em;
   border-radius: 1.5em;
@@ -875,15 +817,15 @@ body.dialog-open {
   transition: 300ms;
   margin-bottom: 0;
   margin-top: 1em;
-  margin-left: auto; /* Add this line */
-  position: relative; /* Add this line */
-  box-shadow: 0 0 10px #FFD4F7; /* Add shadow glow effect */
+  margin-left: auto;
+  position: relative;
+  box-shadow: 0 0 10px #FFD4F7;
 }
 
 .project-container button:hover{
   background-color: white;
   color: black;
-  box-shadow: 0 0 20px #FFD4F7; /* Enhance shadow glow effect on hover */
+  box-shadow: 0 0 20px #FFD4F7;
 }
 
 .project-info{
@@ -898,8 +840,6 @@ body.dialog-open {
   height: auto;
 }
 
-/* tweede div */
-
 .project-info2{
   display: none;
   overflow: hidden;
@@ -911,8 +851,6 @@ body.dialog-open {
   display: block;
   height: auto;
 }
-
-/* derde div */
 
 .project-info3{
   display: none;
@@ -926,8 +864,6 @@ body.dialog-open {
   height: auto;
 }
 
-/* vierde div */
-
 .project-info4{
   display: none;
   overflow: hidden;
@@ -940,28 +876,27 @@ body.dialog-open {
   height: auto;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .code-projects {
-        margin: 2em; /* Adjust margin for small screens */
+        margin: 2em;
     }
 
     .code-projects .project-container {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .code-projects .project-container button {
-        margin-top: 1em; /* Adjust margin for small screens */
-        width: auto; /* Ensure button size */
-        text-align: center; /* Center text */
+        margin-top: 1em;
+        width: auto;
+        text-align: center;
     }
 
     .code-projects .project-info,
     .code-projects .project-info2,
     .code-projects .project-info3,
     .code-projects .project-info4 {
-        margin-bottom: 1em; /* Adjust margin for small screens */
+        margin-bottom: 1em;
     }
 
     .project-container button{
