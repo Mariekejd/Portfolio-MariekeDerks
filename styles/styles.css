@@ -208,6 +208,14 @@ header nav .home-button {
   margin-right: auto; /* Push the home button to the left */
 }
 
+.home-button a:hover{
+  color: black;
+}
+
+.home-button a{
+  text-decoration: none;
+  color: white;
+}
 /*section me */
 
 h1, h2, h3{
@@ -833,6 +841,8 @@ body.dialog-open {
 
 .project-container{
   padding: 1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
   font-family: 'Panchang-Medium', Arial;
   margin-bottom: 1em;
   border: 1px solid white;
@@ -843,8 +853,12 @@ body.dialog-open {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for hover effect */
 }
 
+.project-container h3{
+
+  font-size: 1.1em;
+}
+
 .project-container:hover {
-  transform: scale(1.05); /* Scale the div slightly */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
   background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
 }
@@ -859,6 +873,7 @@ body.dialog-open {
   color: white;
   text-decoration: none;
   transition: 300ms;
+  margin-bottom: 0;
   margin-top: 1em;
   margin-left: auto; /* Add this line */
   position: relative; /* Add this line */
@@ -873,8 +888,54 @@ body.dialog-open {
 
 .project-info{
   display: none;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  margin-bottom: 1em;
 }
 
 .project-info.visible{
   display: block;
+  height: auto;
+}
+
+/* tweede div */
+
+.project-info2{
+  display: none;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  margin-bottom: 1em;
+}
+
+.project-info2.visible{
+  display: block;
+  height: auto;
+}
+
+/* derde div */
+
+.project-info3{
+  display: none;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  margin-bottom: 1em;
+}
+
+.project-info3.visible{
+  display: block;
+  height: auto;
+}
+
+/* vierde div */
+
+.project-info4{
+  display: none;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  margin-bottom: 1em;
+}
+
+.project-info4.visible{
+  display: block;
+  height: auto;
 }

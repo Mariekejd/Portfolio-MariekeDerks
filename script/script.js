@@ -104,6 +104,47 @@ const infoText = document.querySelector('.project-info');
 
 infoBtn.addEventListener('click', () => {
     infoText.classList.toggle('visible');
+    if (infoText.classList.contains('visible')) {
+        infoText.style.height = infoText.scrollHeight + 'px';
+    } else {
+        infoText.style.height = '0';
+    }
+});
+
+const infoBtn2 = document.querySelector('.openInfo2');
+const infoText2 = document.querySelector('.project-info2'); 
+
+infoBtn2.addEventListener('click', () => {
+    infoText2.classList.toggle('visible');
+    if (infoText2.classList.contains('visible')) {
+        infoText2.style.height = infoText2.scrollHeight + 'px';
+    } else {
+        infoText2.style.height = '0';
+    }
+});
+
+const infoBtn3 = document.querySelector('.openInfo3');
+const infoText3 = document.querySelector('.project-info3'); 
+
+infoBtn3.addEventListener('click', () => {
+    infoText3.classList.toggle('visible');
+    if (infoText3.classList.contains('visible')) {
+        infoText3.style.height = infoText3.scrollHeight + 'px';
+    } else {
+        infoText3.style.height = '0';
+    }
+});
+
+const infoBtn4 = document.querySelector('.openInfo4');
+const infoText4 = document.querySelector('.project-info4'); 
+
+infoBtn4.addEventListener('click', () => {
+    infoText4.classList.toggle('visible');
+    if (infoText4.classList.contains('visible')) {
+        infoText4.style.height = infoText4.scrollHeight + 'px';
+    } else {
+        infoText4.style.height = '0';
+    }
 });
 
 
