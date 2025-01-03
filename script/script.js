@@ -6,30 +6,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('toggle-carousel');
     const carouselContainer = document.getElementById('carousel-container');
 
-    toggleButton.addEventListener('click', () => {
-        if (carouselContainer.classList.contains('active')) {
-            carouselContainer.classList.remove('active');
-            setTimeout(() => {
-                carouselContainer.classList.remove('dropdown');
-                carouselContainer.style.display = 'none';
-            }, 500); // Match this duration with the CSS transition
-        } else {
-            carouselContainer.style.display = 'block';
-            setTimeout(() => {
-                carouselContainer.classList.add('dropdown');
+    if (toggleButton && carouselContainer) {
+        toggleButton.addEventListener('click', () => {
+            if (carouselContainer.classList.contains('active')) {
+                carouselContainer.classList.remove('active');
                 setTimeout(() => {
-                    carouselContainer.classList.add('active');
-                }, 10); // Slight delay to trigger the transition
-            }, 10); // Slight delay to ensure display is set before adding class
-        }
-        toggleButton.classList.toggle('active');
-    });
+                    carouselContainer.classList.remove('dropdown');
+                    carouselContainer.style.display = 'none';
+                }, 500); // Match this duration with the CSS transition
+            } else {
+                carouselContainer.style.display = 'block';
+                setTimeout(() => {
+                    carouselContainer.classList.add('dropdown');
+                    setTimeout(() => {
+                        carouselContainer.classList.add('active');
+                    }, 10); // Slight delay to trigger the transition
+                }, 10); // Slight delay to ensure display is set before adding class
+            }
+            toggleButton.classList.toggle('active');
+        });
 
-    carouselContainer.addEventListener('transitionend', (event) => {
-        if (event.propertyName === 'opacity' && !carouselContainer.classList.contains('active')) {
-            carouselContainer.style.display = 'none';
-        }
-    });
+        carouselContainer.addEventListener('transitionend', (event) => {
+            if (event.propertyName === 'opacity' && !carouselContainer.classList.contains('active')) {
+                carouselContainer.style.display = 'none';
+            }
+        });
+    } else {
+        console.log('Toggle button or carousel container not found');
+    }
 
     let currentIndex = 0;
 
@@ -90,21 +94,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Ensure close button works after dynamically adding event listeners
-    document.addEventListener('click', (event) => {
-        if (event.target.classList.contains('close-dialog')) {
-            const dialog = event.target.closest('dialog');
-            dialog.setAttribute('closing', '');
-            dialog.addEventListener('animationend', () => {
-                dialog.removeAttribute('closing');
-                dialog.close();
-                document.body.classList.remove('dialog-open');
-            }, { once: true });
-        }
-    });
 });
 
-// open project info
+/* DIY */
+
+
+const infoBtn = document.querySelector('.openInfo');
+const infoText = document.querySelector('.project-info'); 
+
+infoBtn.addEventListener('click', () => {
+    infoText.classList.toggle('visible');
+});
+
 
 
 
