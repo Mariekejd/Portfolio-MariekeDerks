@@ -939,3 +939,32 @@ body.dialog-open {
   display: block;
   height: auto;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .code-projects {
+        margin: 2em; /* Adjust margin for small screens */
+    }
+
+    .code-projects .project-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .code-projects .project-container button {
+        margin-top: 1em; /* Adjust margin for small screens */
+        width: auto; /* Ensure button size */
+        text-align: center; /* Center text */
+    }
+
+    .code-projects .project-info,
+    .code-projects .project-info2,
+    .code-projects .project-info3,
+    .code-projects .project-info4 {
+        margin-bottom: 1em; /* Adjust margin for small screens */
+    }
+
+    .project-container button{
+      top: -15px;
+    }
+}
