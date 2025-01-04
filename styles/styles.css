@@ -1,9 +1,14 @@
+/* Global Styles */
 *,
 ::after,
 ::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body{
@@ -20,6 +25,7 @@ img{
     width: 100%;
 }
 
+/* Font Faces */
 @font-face {
   font-family: 'Panchang-Extralight';
   src: url('../fonts/Panchang-Extralight.woff2') format('woff2'),
@@ -149,43 +155,45 @@ img{
   font-style: normal;
 }
 
-button {
+/* Button Styles */
+button, a.button {
   background: none;
-  margin-top: 1em;
+  margin-top: 0.5em; /* Reduced margin */
   border: 2px solid white;
-  padding: .5em 1em;
+  padding: 0.3em 0.8em; /* Reduced padding */
   border-radius: 1.5em;
   color: white;
-
+  text-decoration: none;
   transition: 300ms;
 }
 
-button:hover {
+button:hover, a.button:hover {
   background-color: white;
   color: black;
 }
 
+/* Header Styles */
 header nav{
     display: flex;
     justify-content: flex-end;
 }
 
-header nav .home-button,
-header nav button {
-    background: none;
-    border: 2px solid white;
-    margin: 1.5em .7em;
-    padding: .5em 1em;
-    border-radius: 1.5em;
-    color: white;
-    text-decoration: none;
-    transition: 300ms;
+header nav a{
+  font-family: 'Panchang-Regular', Arial;
+  font-size: 1em;
+  background: none;
+  border: 2px solid white;
+  margin: 1em 0.5em; /* Reduced margin */
+  padding: 0.3em 0.8em; /* Reduced padding */
+  border-radius: 1.5em;
+  color: white;
+  text-decoration: none;
+  transition: 300ms;
 }
 
-header nav .home-button:hover,
-header nav button:hover {
-    background-color: white;
-    color: black;
+header nav a:hover {
+  background-color: white;
+  color: black;
 }
 
 header nav .home-button {
@@ -199,33 +207,37 @@ header nav .home-button {
 .home-button a{
   text-decoration: none;
   color: white;
+  border: none; /* Remove border from a inside home-button */
+  padding: 0; /* Remove padding from a inside home-button */
 }
 
-h1, h2, h3{
+/* Typography */
+h1, h2, h3 {
   font-family: 'Panchang-Medium', Arial;
 }
 
 h1 {
-  font-size: clamp(2rem, 2vw + 1rem, 3rem);
+  font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem); /* Adjusted clamp values for smaller size */
 }
 
 h2 {
-  font-size: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
+  font-size: clamp(1.125rem, 2.5vw + 1rem, 2.25rem); /* Adjusted clamp values for smaller size */
 }
 
 h3 {
-  font-size: clamp(1.2rem, 1.2vw + 0.5rem, 1.8rem);
+  font-size: clamp(1rem, 2.5vw + 0.5rem, 1.8rem);
 }
 
-p{
+p {
   font-family: 'SpaceGrotesk-Regular', Arial;
-  font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+  font-size: clamp(0.875rem, 2vw + 0.5rem, 1.2rem);
 }
 
 button{
   font-family: 'Panchang-Regular', Arial;
 }
 
+/* Profile Section */
 .me{
     margin: 5em 10em;
     margin-bottom: 2em;
@@ -259,6 +271,7 @@ button{
     margin-left: 2em;
 }
 
+/* Carousel Section */
 #carousel-container {
     margin: 1em 10em;
 }
@@ -391,6 +404,7 @@ button{
     right: 0;
 }
 
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -402,6 +416,7 @@ button{
     }
 }
 
+/* Section Styles */
 section {
     margin: 5em 10em;
     margin-top: 7em;
@@ -505,6 +520,7 @@ section {
     }
 }
 
+/* Dialog Styles */
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
@@ -575,6 +591,7 @@ body.dialog-open {
   overflow: hidden;
 }
 
+/* All Projects Section */
 .allprojects h2 {
   margin-bottom: 1em;
   border-bottom: 1px solid white;
@@ -662,6 +679,7 @@ body.dialog-open {
   }
 }
 
+/* Contact Section */
 .contact {
   margin: 12em 10em;
   text-align: center;
@@ -776,6 +794,7 @@ body.dialog-open {
   }
 }
 
+/* Code Projects Section */
 .code-projects nav a{
   text-decoration: none;
   color: white;
@@ -797,6 +816,8 @@ body.dialog-open {
 }
 
 .project-container{
+  display: flex;
+  flex-direction: column;
   padding: 1em;
   padding-bottom: 0;
   margin-bottom: 0;
@@ -805,13 +826,13 @@ body.dialog-open {
   border: 1px solid white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: 1em;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .project-container h3{
-  font-size: 1.1em;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .project-container:hover {
@@ -821,7 +842,6 @@ body.dialog-open {
 
 .project-container button {
   display: inline-block;
-  top: -35px;
   background: #3F3536;
   border: 2px solid white;
   padding: 1em 1.5em;
@@ -829,10 +849,6 @@ body.dialog-open {
   color: white;
   text-decoration: none;
   transition: 300ms;
-  margin-bottom: 0;
-  margin-top: 1em;
-  margin-left: auto;
-  position: relative;
   box-shadow: 0 0 10px #FFD4F7;
 }
 
@@ -842,52 +858,62 @@ body.dialog-open {
   box-shadow: 0 0 20px #FFD4F7;
 }
 
-.project-info{
-  display: none;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  margin-bottom: 1em;
+.project-info,
+.project-info2,
+.project-info3,
+.project-info4 {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 1em;
+    opacity: 0;
 }
 
-.project-info.visible{
-  display: block;
-  height: auto;
+.project-info.visible,
+.project-info2.visible,
+.project-info3.visible,
+.project-info4.visible {
+    opacity: 1;
 }
 
-.project-info2{
-  display: none;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  margin-bottom: 1em;
+.project-info img,
+.project-info2 img,
+.project-info3 img,
+.project-info4 img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
 }
 
-.project-info2.visible{
-  display: block;
-  height: auto;
+.project-info2 img {
+    width: 100%;
+    max-width: 200px; /* Adjust the max-width to make the images smaller */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
 }
 
-.project-info3{
-  display: none;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  margin-bottom: 1em;
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
 }
 
-.project-info3.visible{
-  display: block;
-  height: auto;
-}
+@media (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.project-info4{
-  display: none;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  margin-bottom: 1em;
-}
-
-.project-info4.visible{
-  display: block;
-  height: auto;
+    .flex-row button {
+        margin-top: 1em;
+        width: auto;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -914,6 +940,147 @@ body.dialog-open {
     }
 
     .project-container button{
-      top: -15px;
+      top: -9px;
     }
+}
+
+@media (max-width: 375px) {
+    .project-container h3 {
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
+    }
+
+    .project-container button {
+        padding: 0.3em 0.8em;
+        font-size: 0.8rem;
+    }
+}
+
+/* Design Projects Section */
+.design-projects {
+  margin: 5em 10em;
+  margin-top: 7em;
+}
+
+.design-projects h2 {
+  margin-bottom: 1em;
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+}
+
+.design-projects .project-container {
+  font-family: 'Panchang-Medium', Arial;
+  margin-bottom: 1em;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.design-projects .project-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.design-projects .project-container h3 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.design-projects .project-container button {
+  display: inline-block;
+  background: #3F3536;
+  border: 2px solid white;
+  padding: 1em 1.5em;
+  border-radius: 1.5em;
+  color: white;
+  text-decoration: none;
+  transition: 300ms;
+  box-shadow: 0 0 10px #FFD4F7;
+}
+
+.design-projects .project-container button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 20px #FFD4F7;
+}
+
+.design-projects .project-info,
+.design-projects .project-info2,
+.design-projects .project-info3,
+.design-projects .project-info4 {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  margin-bottom: 1em;
+  opacity: 0;
+}
+
+.design-projects .project-info.visible,
+.design-projects .project-info2.visible,
+.design-projects .project-info3.visible,
+.design-projects .project-info4.visible {
+  opacity: 1;
+}
+
+.design-projects .project-info img,
+.design-projects .project-info2 img,
+.design-projects .project-info3 img,
+.design-projects .project-info4 img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.design-projects .project-info2 img {
+  width: 100%;
+  max-width: 200px; /* Adjust the max-width to make the images smaller */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+/* Hide second image in Project 1 on smaller devices */
+@media (max-width: 768px) {
+  .project-info img:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .design-projects {
+    margin: 2em;
+  }
+
+  .design-projects .project-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .design-projects .project-container button {
+    margin-top: 1em;
+    width: auto;
+    text-align: center;
+  }
+
+  .design-projects .project-info,
+  .design-projects .project-info2,
+  .design-projects .project-info3,
+  .design-projects .project-info4 {
+    margin-bottom: 1em;
+  }
+}
+
+/* Intro Design Section */
+.intro-design {
+  margin: 5em 10em;
+  margin-top: 7em;
+}
+
+@media (max-width: 768px) {
+  .intro-design {
+    margin: 5em 2em;
+  }
 }

@@ -94,9 +94,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const infoBtns = document.querySelectorAll('.openInfo, .openInfo2, .openInfo3, .openInfo4');
+    const infoTexts = document.querySelectorAll('.project-info, .project-info2, .project-info3, .project-info4');
+
+    infoBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            const infoText = infoTexts[index];
+            infoText.classList.toggle('visible');
+            if (infoText.classList.contains('visible')) {
+                infoText.style.display = 'block';
+                infoText.style.height = infoText.scrollHeight + 'px';
+            } else {
+                infoText.style.height = '0';
+            }
+        });
+    });
+
+    const infoContainers = document.querySelectorAll('.project-container');
+
+    infoContainers.forEach((container, index) => {
+        container.addEventListener('click', (event) => {
+            if (!event.target.classList.contains('openInfo') && !event.target.classList.contains('openInfo2') && !event.target.classList.contains('openInfo3') && !event.target.classList.contains('openInfo4')) {
+                const infoText = infoTexts[index];
+                infoText.classList.toggle('visible');
+                if (infoText.classList.contains('visible')) {
+                    infoText.style.display = 'block';
+                    const height = infoText.scrollHeight + 'px';
+                    infoText.style.height = height;
+                } else {
+                    infoText.style.height = infoText.scrollHeight + 'px';
+                    setTimeout(() => {
+                        infoText.style.height = '0';
+                    }, 10); // Slight delay to ensure height is set before collapsing
+                }
+            }
+        });
+    });
+
+    infoTexts.forEach(infoText => {
+        infoText.addEventListener('transitionend', () => {
+            if (!infoText.classList.contains('visible')) {
+                infoText.style.display = 'none';
+            }
+        });
+    });
+
 });
 
-/* DIY */
+/* Peroject info */
 
 
 const infoBtn = document.querySelector('.openInfo');

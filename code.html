@@ -9,9 +9,9 @@
   <body>
     <header class="code">
       <nav>
-        <button class="home-button"><a href="index.html">Home</a></button>
-        <button>Projects</button>
-        <button>Contact</button>
+        <a href="index.html" class="home-button">Home</a>
+        <a href="#projects-section">Projects</a>
+        <a href="#contact-section">Contact</a>
       </nav>
     </header>
 
@@ -32,11 +32,15 @@
       </section>
 
       <section class="code-projects">
+        
         <div class="project-container">
+          <!--Extra div om h3 en button voor flex row en de rest column-->
+          <div class="flex-row">
           <h3>Project 1: Eerste website html en CSS</h3>
           <button class="openInfo">Info</button>
+          </div>
           <div class="project-info">
-            <img src="" alt="" />
+            <a href="https://mariekejd.github.io/the-last-of-us-franchise/" target="_blank" class="button"> <img src="./images/tlou-franchise-website.png" alt="test image"></a>
             <p>
               In mijn eerste codering vak leerde ik de basis van HTML en CSS
               door een eenvoudige website te bouwen. De opdracht was om een
@@ -50,10 +54,13 @@
         </div>
 
         <div class="project-container">
+          <div class="flex-row">
           <h3>Project 2: Mobiele Website voor een Groen Initiatief</h3>
           <button class="openInfo2">Info</button>
+          </div>
           <div class="project-info2">
-            <img src="" alt="" />
+            <img src="./images/thrifting-guide-1.png" alt="Project 2 Image" />
+            <img src="./images/thrifting-guide-2.png" alt="Project 2 Image" />
             <p>
               Het volgende project was het ontwerpen en bouwen van een mobiele
               website voor een duurzaam initiatief in Amsterdam. Ik maakte een
@@ -67,10 +74,12 @@
         </div>
 
         <div class="project-container">
+          <div class="flex-row">
           <h3>Project 3: Javascript – Mini Game Ontwikkelen</h3>
           <button class="openInfo3">Info</button>
+          </div>
           <div class="project-info3">
-            <img src="" alt="" />
+            <img src="./images/mansion-tycoon.png" alt="Project 3 Image" />
             <p>
               Dit project markeerde mijn eerste kennismaking met JavaScript. De
               opdracht was om een mini-game te maken waarin alle interacties met
@@ -84,10 +93,13 @@
         </div>
 
         <div class="project-container">
+          <div class="flex-row">
           <h3>Project 4: Front-end – Website Reproductie</h3>
           <button class="openInfo4">Info</button>
+          </div>
           <div class="project-info4">
-            <img src="" alt="" />
+            <img src="./images/ps-desktop1.png" alt="Project 4 Image" />
+            <img src="./images/ps-desktop2.png" alt="Project 4 Image" />
             <p>
               In het tweede jaar van mijn studie combineerde ik HTML, CSS en
               JavaScript om een bestaande website na te maken. Ik koos de
@@ -99,6 +111,20 @@
               ervan in moderne webontwikkeling.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/marieke-derks" target="_blank" class="contact-link button">
+            <img src="./images/linked-in-white.png" alt="LinkedIn">
+            <p>LinkedIn</p>
+          </a>
+          <a href="mailto:marieke.derks@example.com" class="contact-link button">
+            <img src="./images/mail-white-icon.png" alt="Email">
+            <p>Email</p>
+          </a>
         </div>
       </section>
     </main>
