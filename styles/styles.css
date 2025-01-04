@@ -158,9 +158,9 @@ img{
 /* Button Styles */
 button, a.button {
   background: none;
-  margin-top: 0.5em; /* Reduced margin */
+  margin-top: 0.5em;
   border: 2px solid white;
-  padding: 0.3em 0.8em; /* Reduced padding */
+  padding: 0.3em 0.8em;
   border-radius: 1.5em;
   color: white;
   text-decoration: none;
@@ -183,8 +183,8 @@ header nav a{
   font-size: 1em;
   background: none;
   border: 2px solid white;
-  margin: 1em 0.5em; /* Reduced margin */
-  padding: 0.3em 0.8em; /* Reduced padding */
+  margin: 1em 0.5em;
+  padding: 0.3em 0.8em;
   border-radius: 1.5em;
   color: white;
   text-decoration: none;
@@ -207,8 +207,8 @@ header nav .home-button {
 .home-button a{
   text-decoration: none;
   color: white;
-  border: none; /* Remove border from a inside home-button */
-  padding: 0; /* Remove padding from a inside home-button */
+  border: none;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -217,8 +217,8 @@ header nav .home-button {
   }
 
   header nav a {
-    margin: 0.5em 0.3em; /* Adjust margin for smaller screens */
-    padding: 0.5em 0.8em; /* Adjust padding for smaller screens */
+    margin: 0.5em 0.3em;
+    padding: 0.5em 0.8em;
   }
 
   header nav .home-button {
@@ -228,14 +228,14 @@ header nav .home-button {
 
 @media (max-width: 375px) {
   header nav a {
-    font-size: 0.875em; /* Smaller font size */
-    padding: 0.3em 0.6em; /* Smaller padding */
-    margin: 0.3em 0.2em; /* Adjust margin for smaller screens */
+    font-size: 0.875em;
+    padding: 0.3em 0.6em;
+    margin: 0.3em 0.2em;
   }
 
   button, a.button {
-    font-size: 0.875em; /* Smaller font size */
-    padding: 0.3em 0.6em; /* Smaller padding */
+    font-size: 0.875em;
+    padding: 0.3em 0.6em;
   }
 }
 
@@ -245,11 +245,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem); /* Adjusted clamp values for smaller size */
+  font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem);
 }
 
 h2 {
-  font-size: clamp(1.125rem, 2.5vw + 1rem, 2.25rem); /* Adjusted clamp values for smaller size */
+  font-size: clamp(1.125rem, 2.5vw + 1rem, 2.25rem);
 }
 
 h3 {
@@ -583,7 +583,7 @@ dialog::backdrop {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: dialogFadeIn 0.3s ease-out;
-    width: clamp(300px, 80%, 600px); /* Adjust width to be more responsive */
+    width: clamp(300px, 80%, 600px);
 }
 
 .dialog[closing] {
@@ -917,7 +917,7 @@ body.dialog-open {
 
 .project-info2 img {
     width: 100%;
-    max-width: 200px; /* Adjust the max-width to make the images smaller */
+    max-width: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1em;
@@ -1064,13 +1064,12 @@ body.dialog-open {
 
 .design-projects .project-info2 img {
   width: 100%;
-  max-width: 200px; /* Adjust the max-width to make the images smaller */
+  max-width: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1em;
 }
 
-/* Hide second image in Project 1 on smaller devices */
 @media (max-width: 768px) {
   .project-info img:nth-of-type(2) {
     display: none;
