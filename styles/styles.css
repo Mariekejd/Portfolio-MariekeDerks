@@ -1,4 +1,3 @@
-/* Global Styles */
 *,
 ::after,
 ::before {
@@ -6,1090 +5,920 @@
   margin: 0;
   padding: 0
 }
-
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
 }
-
-body{
-    background-image: url('../images/background-dark.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
-    opacity: 0;
-    animation: fadeInUp 1s ease-in-out forwards;
+body {
+  background-image: url('../images/background-dark.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards
 }
-
-img{
-    width: 100%;
+img {
+  width: 100%
 }
-
-/* Font Faces */
 @font-face {
-  font-family: 'Panchang-Extralight';
-  src: url('../fonts/Panchang-Extralight.woff2') format('woff2'),
-       url('../fonts/Panchang-Extralight.woff') format('woff'),
-       url('../fonts/Panchang-Extralight.ttf') format('truetype');
+  font-family: Panchang-Extralight;
+  src: url('../fonts/Panchang-Extralight.woff2') format('woff2'),url('../fonts/Panchang-Extralight.woff') format('woff'),url('../fonts/Panchang-Extralight.ttf') format('truetype');
   font-weight: 200;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'Panchang-Light';
-  src: url('../fonts/Panchang-Light.woff2') format('woff2'),
-       url('../fonts/Panchang-Light.woff') format('woff'),
-       url('../fonts/Panchang-Light.ttf') format('truetype');
+  font-family: Panchang-Light;
+  src: url('../fonts/Panchang-Light.woff2') format('woff2'),url('../fonts/Panchang-Light.woff') format('woff'),url('../fonts/Panchang-Light.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'Panchang-Regular';
-  src: url('../fonts/Panchang-Regular.woff2') format('woff2'),
-       url('../fonts/Panchang-Regular.woff') format('woff'),
-       url('../fonts/Panchang-Regular.ttf') format('truetype');
+  font-family: Panchang-Regular;
+  src: url('../fonts/Panchang-Regular.woff2') format('woff2'),url('../fonts/Panchang-Regular.woff') format('woff'),url('../fonts/Panchang-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'Panchang-Medium';
-  src: url('../fonts/Panchang-Medium.woff2') format('woff2'),
-       url('../fonts/Panchang-Medium.woff') format('woff'),
-       url('../fonts/Panchang-Medium.ttf') format('truetype');
+  font-family: Panchang-Medium;
+  src: url('../fonts/Panchang-Medium.woff2') format('woff2'),url('../fonts/Panchang-Medium.woff') format('woff'),url('../fonts/Panchang-Medium.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'Panchang-Semibold';
-  src: url('../fonts/Panchang-Semibold.woff2') format('woff2'),
-       url('../fonts/Panchang-Semibold.woff') format('woff'),
-       url('../fonts/Panchang-Semibold.ttf') format('truetype');
+  font-family: Panchang-Semibold;
+  src: url('../fonts/Panchang-Semibold.woff2') format('woff2'),url('../fonts/Panchang-Semibold.woff') format('woff'),url('../fonts/Panchang-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'Panchang-Bold';
-  src: url('../fonts/Panchang-Bold.woff2') format('woff2'),
-       url('../fonts/Panchang-Bold.woff') format('woff'),
-       url('../fonts/Panchang-Bold.ttf') format('truetype');
+  font-family: Panchang-Bold;
+  src: url('../fonts/Panchang-Bold.woff2') format('woff2'),url('../fonts/Panchang-Bold.woff') format('woff'),url('../fonts/Panchang-Bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'Panchang-Extrabold';
-  src: url('../fonts/Panchang-Extrabold.woff2') format('woff2'),
-       url('../fonts/Panchang-Extrabold.woff') format('woff'),
-       url('../fonts/Panchang-Extrabold.ttf') format('truetype');
+  font-family: Panchang-Extrabold;
+  src: url('../fonts/Panchang-Extrabold.woff2') format('woff2'),url('../fonts/Panchang-Extrabold.woff') format('woff'),url('../fonts/Panchang-Extrabold.ttf') format('truetype');
   font-weight: 800;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'Panchang-Variable';
-  src: url('../fonts/Panchang-Variable.woff2') format('woff2'),
-       url('../fonts/Panchang-Variable.woff') format('woff'),
-       url('../fonts/Panchang-Variable.ttf') format('truetype');
+  font-family: Panchang-Variable;
+  src: url('../fonts/Panchang-Variable.woff2') format('woff2'),url('../fonts/Panchang-Variable.woff') format('woff'),url('../fonts/Panchang-Variable.ttf') format('truetype');
   font-weight: 200 800;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
-
 @font-face {
-  font-family: 'SpaceGrotesk-Light';
-  src: url('../fonts/SpaceGrotesk-Light.woff2') format('woff2'),
-       url('../fonts/SpaceGrotesk-Light.woff') format('woff'),
-       url('../fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  font-family: SpaceGrotesk-Light;
+  src: url('../fonts/SpaceGrotesk-Light.woff2') format('woff2'),url('../fonts/SpaceGrotesk-Light.woff') format('woff'),url('../fonts/SpaceGrotesk-Light.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'SpaceGrotesk-Regular';
-  src: url('../fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
-       url('../fonts/SpaceGrotesk-Regular.woff') format('woff'),
-       url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-family: SpaceGrotesk-Regular;
+  src: url('../fonts/SpaceGrotesk-Regular.woff2') format('woff2'),url('../fonts/SpaceGrotesk-Regular.woff') format('woff'),url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'SpaceGrotesk-Medium';
-  src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
-       url('../fonts/SpaceGrotesk-Medium.woff') format('woff'),
-       url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-family: SpaceGrotesk-Medium;
+  src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2'),url('../fonts/SpaceGrotesk-Medium.woff') format('woff'),url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'SpaceGrotesk-SemiBold';
-  src: url('../fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
-       url('../fonts/SpaceGrotesk-SemiBold.woff') format('woff'),
-       url('../fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+  font-family: SpaceGrotesk-SemiBold;
+  src: url('../fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),url('../fonts/SpaceGrotesk-SemiBold.woff') format('woff'),url('../fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
 @font-face {
-  font-family: 'SpaceGrotesk-Bold';
-  src: url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
-       url('../fonts/SpaceGrotesk-Bold.woff') format('woff'),
-       url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-family: SpaceGrotesk-Bold;
+  src: url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),url('../fonts/SpaceGrotesk-Bold.woff') format('woff'),url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
-
 @font-face {
-  font-family: 'SpaceGrotesk-Variable';
-  src: url('../fonts/SpaceGrotesk-Variable.woff2') format('woff2'),
-       url('../fonts/SpaceGrotesk-Variable.woff') format('woff'),
-       url('../fonts/SpaceGrotesk-Variable.ttf') format('truetype');
+  font-family: SpaceGrotesk-Variable;
+  src: url('../fonts/SpaceGrotesk-Variable.woff2') format('woff2'),url('../fonts/SpaceGrotesk-Variable.woff') format('woff'),url('../fonts/SpaceGrotesk-Variable.ttf') format('truetype');
   font-weight: 300 700;
   font-display: swap;
-  font-style: normal;
+  font-style: normal
 }
-
-/* Button Styles */
-button, a.button {
-  background: none;
-  margin-top: 0.5em;
-  border: 2px solid white;
-  padding: 0.3em 0.8em;
+a.button,
+button {
+  background: 0 0;
+  margin-top: .5em;
+  border: 2px solid #fff;
+  padding: .3em .8em;
   border-radius: 1.5em;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: 300ms;
+  transition: .3s
 }
-
-button:hover, a.button:hover {
-  background-color: white;
-  color: black;
+a.button:hover,
+button:hover {
+  background-color: #fff;
+  color: #000
 }
-
-/* Header Styles */
-header nav{
-    display: flex;
-    justify-content: flex-end;
+header nav {
+  display: flex;
+  justify-content: flex-end
 }
-
-header nav a{
-  font-family: 'Panchang-Regular', Arial;
+header nav a {
+  font-family: Panchang-Regular,Arial;
   font-size: 1em;
-  background: none;
-  border: 2px solid white;
-  margin: 1em 0.5em;
-  padding: 0.3em 0.8em;
+  background: 0 0;
+  border: 2px solid #fff;
+  margin: 1em .5em;
+  padding: .3em .8em;
   border-radius: 1.5em;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: 300ms;
+  transition: .3s
 }
-
 header nav a:hover {
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000
 }
-
 header nav .home-button {
-  margin-right: auto;
+  margin-right: auto
 }
-
-.home-button a:hover{
-  color: black;
+.home-button a:hover {
+  color: #000
 }
-
-.home-button a{
+.home-button a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 0;
+  padding: 0
 }
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   header nav {
-    margin: .5em;
+    margin: .5em
   }
-
   header nav a {
-    margin: 0.5em 0.3em;
-    padding: 0.5em 0.8em;
+    margin: .5em .3em;
+    padding: .5em .8em
   }
-
   header nav .home-button {
-    margin-left: 0;
+    margin-left: 0
   }
 }
-
-@media (max-width: 375px) {
+@media (max-width:375px) {
   header nav a {
-    font-size: 0.875em;
-    padding: 0.3em 0.6em;
-    margin: 0.3em 0.2em;
+    font-size: .875em;
+    padding: .3em .6em;
+    margin: .3em .2em
   }
-
-  button, a.button {
-    font-size: 0.875em;
-    padding: 0.3em 0.6em;
+  a.button,
+  button {
+    font-size: .875em;
+    padding: .3em .6em
   }
 }
-
-/* Typography */
-h1, h2, h3 {
-  font-family: 'Panchang-Medium', Arial;
-}
-
-h1 {
-  font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem);
-}
-
-h2 {
-  font-size: clamp(1.125rem, 2.5vw + 1rem, 2.25rem);
-}
-
+h1,
+h2,
 h3 {
-  font-size: clamp(1rem, 2.5vw + 0.5rem, 1.8rem);
+  font-family: Panchang-Medium,Arial
 }
-
+h1 {
+  font-size: clamp(1.25rem, 3vw + 1rem, 2.5rem)
+}
+h2 {
+  font-size: clamp(1.125rem, 2.5vw + 1rem, 2.25rem)
+}
+h3 {
+  font-size: clamp(1rem, 2.5vw + .5rem, 1.8rem)
+}
 p {
-  font-family: 'SpaceGrotesk-Regular', Arial;
-  font-size: clamp(0.875rem, 2vw + 0.5rem, 1.2rem);
+  font-family: SpaceGrotesk-Regular,Arial;
+  font-size: clamp(.875rem, 2vw + .5rem, 1.2rem)
 }
-
-button{
-  font-family: 'Panchang-Regular', Arial;
+button {
+  font-family: Panchang-Regular,Arial
 }
-
-/* Profile Section */
-.me{
-    margin: 5em 10em;
-    margin-bottom: 2em;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.me {
+  margin: 5em 10em;
+  margin-bottom: 2em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
 }
-
-.me p{
-  margin-top: 1em;
+.me p {
+  margin-top: 1em
 }
-
-.me button{
-    background: none;
-    border: 2px solid white;
-
-    margin: 1.5em 0;
-    padding: .5em 1em;
-    border-radius: 1.5em;
-    color: white;
-
-    transition: 300ms;
-    position: relative;
-    cursor: pointer;
+.me button {
+  background: 0 0;
+  border: 2px solid #fff;
+  margin: 1.5em 0;
+  padding: .5em 1em;
+  border-radius: 1.5em;
+  color: #fff;
+  transition: .3s;
+  position: relative;
+  cursor: pointer
 }
-
 .me .profile {
-    max-width: 200px;
-    border-radius: 50%;
-    margin-left: 2em;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-left: 2em
 }
-
-/* Carousel Section */
 #carousel-container {
-    margin: 1em 10em;
+  margin: 1em 10em
 }
-
-#toggle-carousel{
-  margin: 0 12em;
+#toggle-carousel {
+  margin: 0 12em
 }
-
-@media (max-width: 768px) {
-    .me {
-        margin: 2em;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .me .profile {
-        margin-left: 0;
-        margin-bottom: 1em;
-    }
-
-    .me button {
-        margin: 1em 0;
-        padding: .5em;
-    }
-
-    #toggle-carousel, #carousel-container {
-        margin: 2em;
-    }
-
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .highlights {
-        flex-direction: column;
-        margin: 2em;
-    }
-
-    .highlights div {
-        margin: 1em 0;
-    }
+@media (max-width:768px) {
+  .me {
+    margin: 2em;
+    flex-direction: column;
+    align-items: center
+  }
+  .me > .profile {
+    margin-top: 2em;
+    margin-left: 0em;
+    margin-bottom: 1em
+  }
+  .me button {
+    margin: 1em 0;
+    padding: .5em
+  }
+  #carousel-container,
+  #toggle-carousel {
+    margin: 2em
+  }
+  .carousel-item img {
+    width: 100%;
+    height: auto
+  }
+  .highlights {
+    flex-direction: column;
+    margin: 2em
+  }
+  .highlights div {
+    margin: 1em 0
+  }
 }
 
 #toggle-carousel {
-    background: none;
-    border: 2px solid white;
-    padding: .5em 1em;
-    border-radius: 1.5em;
-    color: white;
-    transition: 300ms;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background: 0 0;
+  border: 2px solid #fff;
+  padding: .5em 1em;
+  border-radius: 1.5em;
+  color: #fff;
+  transition: .3s;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
 }
-
 #toggle-carousel::after {
-    content: '';
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-left: 0.5em;
-    transform: rotate(-135deg);
+  content: '';
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: .5em;
+  transform: rotate(-135deg)
 }
-
 #toggle-carousel.active {
-    background-color: white;
-    color: black;
+  background-color: #fff;
+  color: #000
 }
-
 #toggle-carousel.active::after {
-    transform: rotate(45deg);
-    border-color: black;
+  transform: rotate(45deg);
+  border-color: #000
 }
-
 .dropdown {
-    display: none;
-    position: relative;
-    margin-top: 1em;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: none;
+  position: relative;
+  margin-top: 1em;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity .5s ease-in-out,transform .5s ease-in-out
 }
-
 .dropdown.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+  display: block;
+  opacity: 1;
+  transform: translateY(0)
 }
-
 .carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative
 }
-
 .carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
+  min-width: 100%;
+  transition: transform .5s ease
 }
-
 .carousel-control {
-    background: none;
-    border: 2px solid white;
-    color: white;
-    padding: .5em 1em;
-    border-radius: 1.5em;
-    transition: 300ms;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 1;
+  background: 0 0;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 1.5em;
+  transition: .3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1
 }
-
 .carousel-control:hover {
-    background-color: white;
-    color: black;
+  background-color: #fff;
+  color: #000
 }
-
 .carousel-control.prev {
-    left: 0;
+  left: 0
 }
-
 .carousel-control.next {
-    right: 0;
+  right: 0
 }
-
-/* Animations */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
 }
-
-/* Section Styles */
 section {
-    margin: 5em 10em;
-    margin-top: 7em;
+  margin: 5em 10em;
+  margin-top: 7em
 }
-
 .highlights h2 {
-    margin-bottom: 1em;
-    border-bottom: 1px solid white;
-    padding-bottom: 1em;
-}
-
-.highlights h3{
-  font-size: 1.1em;
   margin-bottom: 1em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1em
 }
-
+.highlights h3 {
+  font-size: 1.1em;
+  margin-bottom: 1em
+}
 .highlights .projects {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between
 }
-
 .highlights .projects > div {
-    flex: 1;
-    margin: 0 1em;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  flex: 1;
+  margin: 0 1em;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+  transition: transform .3s ease,box-shadow .3s ease,background-color .3s ease
 }
-
 .highlights .projects > div:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.1)
 }
-
 .highlights img {
+  width: 100%;
+  border-radius: 10px
+}
+.highlights .projects > div:nth-of-type(3) img {
+  margin-bottom: .5em
+}
+@media (max-width:768px) {
+  .me {
+    margin: 2em;
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .me button {
+    margin: 1em 0;
+    padding: .5em
+  }
+  #carousel-container,
+  #toggle-carousel {
+    margin: 2em
+  }
+  .carousel-item img {
     width: 100%;
-    border-radius: 10px;
+    height: auto
+  }
+  .highlights {
+    margin: 2em
+  }
+  .highlights .projects {
+    flex-direction: column
+  }
+  .highlights .projects > div {
+    margin: 1em 0
+  }
+  .allprojects {
+    margin: 2em
+  }
+  .codeprojects {
+    margin: 2em
+  }
+  .codeprojects div {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .codeprojects button {
+    margin-top: 1em;
+    width: auto;
+    text-align: center
+  }
 }
-
-.highlights .projects > div:nth-of-type(3) img{
-  margin-bottom: .5em;
-}
-
-@media (max-width: 768px) {
-    .me {
-        margin: 2em;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .me .profile {
-        margin-left: 0;
-        margin-bottom: 1em;
-    }
-
-    .me button {
-        margin: 1em 0;
-        padding: .5em;
-    }
-
-    #toggle-carousel, #carousel-container {
-        margin: 2em;
-    }
-
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .highlights {
-        margin: 2em;
-    }
-
-    .highlights .projects {
-        flex-direction: column;
-    }
-
-    .highlights .projects > div {
-        margin: 1em 0;
-    }
-
-    .allprojects {
-        margin: 2em;
-    }
-
-    .codeprojects {
-        margin: 2em;
-    }
-
-    .codeprojects div {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .codeprojects button {
-        margin-top: 1em;
-        width: auto;
-        text-align: center;
-    }
-}
-
-/* Dialog Styles */
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,.5)
 }
-
 @keyframes dialogFadeIn {
   from {
-    opacity: 0;
+    opacity: 0
   }
   to {
-    opacity: 1;
+    opacity: 1
   }
 }
-
 @keyframes dialogFadeOut {
   from {
-    opacity: 1;
+    opacity: 1
   }
   to {
-    opacity: 0;
+    opacity: 0
   }
 }
-
 .dialog {
-    background: #3F3536;
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 2em;
-    box-shadow: 0 0 10px #FFD4F7, 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: dialogFadeIn 0.3s ease-out;
-    width: clamp(300px, 80%, 600px);
+  background: #3f3536;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 2em;
+  box-shadow: 0 0 10px #ffd4f7,0 4px 8px rgba(0,0,0,.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: dialogFadeIn 0.3s ease-out;
+  width: clamp(300px,80%,600px)
 }
-
 .dialog[closing] {
-    animation: dialogFadeOut 0.3s ease-out;
+  animation: dialogFadeOut 0.3s ease-out
 }
-
 .dialog-content {
-  position: relative;
+  position: relative
 }
-
 .close-dialog {
-    display: inline-block;
-    background: #3F3536;
-    padding: 0.2em 0.5em;
-    border-radius: 1.5em;
-    color: white;
-    text-decoration: none;
-    transition: 300ms;
-    position: absolute;
-    top: -50px;
-    right: -25px;
-    cursor: pointer;
-    font-size: 1.5em;
-    border: none;
+  display: inline-block;
+  background: #3f3536;
+  padding: .2em .5em;
+  border-radius: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+  position: absolute;
+  top: -40px;
+  right: -25px;
+  cursor: pointer;
+  font-size: 1.5em;
+  border: none
 }
-
 .close-dialog:hover {
-    color: #FFD4F7;
-    background: none;
+  color: #ffd4f7;
+  background: 0 0
 }
-
 body.dialog-open {
-  overflow: hidden;
+  overflow: hidden
 }
-
-/* All Projects Section */
 .allprojects h2 {
   margin-bottom: 1em;
-  border-bottom: 1px solid white;
-  padding-bottom: 1em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1em
 }
-
 .allprojects {
   margin: 5em 10em;
-  margin-top: 7em;
+  margin-top: 7em
 }
-
 .allprojects h2 {
   margin-bottom: 1em;
-  border-bottom: 1px solid white;
-  padding-bottom: 1em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1em
 }
-
-.allprojects div{
+.allprojects div {
   padding: 1em;
-  font-family: 'Panchang-Medium', Arial;
+  font-family: Panchang-Medium,Arial;
   margin-bottom: 1em;
-  border: 1px solid white;
+  border: 1px solid #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 1em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform .3s ease,box-shadow .3s ease,background-color .3s ease
 }
-
 .allprojects div:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.1)
 }
-
 .allprojects a {
   display: inline-block;
-  background: #3F3536;
-  border: 2px solid white;
+  background: #3f3536;
+  border: 2px solid #fff;
   padding: 1em 1.5em;
   border-radius: 1.5em;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: 300ms;
+  transition: .3s;
   margin-top: 1em;
   margin-left: auto;
   position: relative;
-  box-shadow: 0 0 10px #FFD4F7;
+  box-shadow: 0 0 10px #ffd4f7
 }
-
-.allprojects a::after{
+.allprojects a::after {
   content: '➔';
   font-size: 1.2em;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: #FFD4F7;
+  transform: translate(-50%,-50%);
+  color: #ffd4f7
 }
-
-.allprojects a:hover{
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 20px #FFD4F7;
+.allprojects a:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #ffd4f7
 }
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .allprojects {
-    margin: 2em;
+    margin: 2em
   }
-
   .codeprojects {
-    margin: 2em;
+    margin: 2em
   }
-
   .codeprojects div {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
   }
-
   .codeprojects button {
     margin-top: 1em;
     width: auto;
-    text-align: center;
+    text-align: center
   }
 }
-
-/* Contact Section */
 .contact {
   margin: 12em 10em;
-  text-align: center;
+  text-align: center
 }
-
 .contact h2 {
   margin-bottom: 1em;
-  border-bottom: 1px solid white;
-  padding-bottom: 1em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1em
 }
-
 .contact-links {
   display: flex;
   justify-content: center;
-  gap: 2em;
+  gap: 2em
 }
-
-.contact p{
- font-family: 'SpaceGrotesk-SemiBold', Arial;
- font-size: 1.2em;
+.contact p {
+  font-family: SpaceGrotesk-SemiBold,Arial;
+  font-size: 1.2em
 }
-
 .contact-link {
   display: flex;
   align-items: center;
-  background: #3F3536;
-  border: 2px solid white;
+  background: #3f3536;
+  border: 2px solid #fff;
   padding: 1em 2em;
   border-radius: 2em;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: 300ms;
-  box-shadow: 0 0 10px #FFD4F7;
+  transition: .3s;
+  box-shadow: 0 0 10px #ffd4f7
 }
-
 .contact-link img {
   width: 24px;
   height: 24px;
-  margin-right: 0.5em;
+  margin-right: .5em
 }
-
 .contact-link:hover {
-  color: #FFD4F7;
-  box-shadow: 0 0 20px #FFD4F7;
-  transform: scale(1.05);
+  color: #ffd4f7;
+  box-shadow: 0 0 20px #ffd4f7;
+  transform: scale(1.05)
 }
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .me {
     margin: 2em;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
   }
-
-  .me .profile {
-    margin-left: 0;
-    margin-bottom: 1em;
-  }
-
   .me button {
     margin: 1em 0;
-    padding: .5em;
+    padding: .5em
   }
-
-  #toggle-carousel, #carousel-container {
-    margin: 2em;
+  #carousel-container,
+  #toggle-carousel {
+    margin: 2em
   }
-
   .carousel-item img {
     width: 100%;
-    height: auto;
+    height: auto
   }
-
   .highlights {
-    margin: 2em;
+    margin: 2em
   }
-
   .highlights .projects {
-    flex-direction: column;
+    flex-direction: column
   }
-
   .highlights .projects > div {
-    margin: 1em 0;
+    margin: 1em 0
   }
-
   .allprojects {
-    margin: 2em;
+    margin: 2em
   }
-
   .contact {
-    margin: 2em;
+    margin: 2em
   }
-
   .contact h2 {
     font-size: 1.5em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.5em
   }
-
   .contact-links {
     flex-direction: column;
-    gap: 1em;
+    gap: 1em
   }
-
   .contact-link {
     padding: 1em;
     width: auto;
-    justify-content: center;
+    justify-content: center
   }
-
   .contact-link img {
-    margin-right: 0.5em;
+    margin-right: .5em
   }
 }
-
-/* Code Projects Section */
-.code-projects nav a{
+.code-projects nav a {
   text-decoration: none;
-  color: white;
+  color: #fff
 }
-
-.code-projects nav a:hover{
-  color: black;
+.code-projects nav a:hover {
+  color: #000
 }
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .intro-code {
-    margin: 5em 2em;
+    margin: 5em 2em
   }
 }
-
 .code-projects h3 {
-  font-family: 'Panchang-Medium', Arial;
-  font-size: 1em;
+  font-family: Panchang-Medium,Arial;
+  font-size: 1em
 }
-
-.project-container{
+.project-container {
   display: flex;
   flex-direction: column;
   padding: 1em;
   padding-bottom: 0;
   margin-bottom: 0;
-  font-family: 'Panchang-Medium', Arial;
+  font-family: Panchang-Medium,Arial;
   margin-bottom: 1em;
-  border: 1px solid white;
+  border: 1px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 1em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform .3s ease,box-shadow .3s ease,background-color .3s ease
 }
-
-.project-container h3{
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+.project-container h3 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem)
 }
-
 .project-container:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.1)
 }
-
 .project-container button {
   display: inline-block;
-  background: #3F3536;
-  border: 2px solid white;
+  background: #3f3536;
+  border: 2px solid #fff;
   padding: 1em 1.5em;
   border-radius: 1.5em;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: 300ms;
-  box-shadow: 0 0 10px #FFD4F7;
+  transition: .3s;
+  box-shadow: 0 0 10px #ffd4f7
 }
-
-.project-container button:hover{
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 20px #FFD4F7;
+.project-container button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #ffd4f7
 }
-
 .project-info,
 .project-info2,
 .project-info3,
 .project-info4 {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease, opacity 0.3s ease;
-    margin-bottom: 1em;
-    opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease,opacity .3s ease;
+  margin-bottom: 1em;
+  opacity: 0
 }
-
 .project-info.visible,
 .project-info2.visible,
 .project-info3.visible,
 .project-info4.visible {
-    opacity: 1;
+  opacity: 1
 }
-
 .project-info img,
 .project-info2 img,
 .project-info3 img,
 .project-info4 img {
-    width: 100%;
-    max-width: 500px; /* Increased from 400px */
-    border-radius: 10px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
-    margin-bottom: 1em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
-
 .project-info2 img {
-    width: 100%;
-    max-width: 300px; /* Increased from 200px */
-    border-radius: 10px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
-    margin-bottom: 1em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
-
 .flex-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em
 }
-
-@media (max-width: 768px) {
-    .flex-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .flex-row button {
-        margin-top: 1em;
-        width: auto;
-        text-align: center;
-    }
+@media (max-width:768px) {
+  .flex-row {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .flex-row button {
+    margin-top: 1em;
+    width: auto;
+    text-align: center
+  }
 }
-
-@media (max-width: 768px) {
-    .code-projects {
-        margin: 2em;
-    }
-
-    .code-projects .project-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .code-projects .project-container button {
-        margin-top: 1em;
-        width: auto;
-        text-align: center;
-    }
-
-    .code-projects .project-info,
-    .code-projects .project-info2,
-    .code-projects .project-info3,
-    .code-projects .project-info4 {
-        margin-bottom: 1em;
-    }
-
-    .project-container button{
-      top: -9px;
-    }
+@media (max-width:768px) {
+  .code-projects {
+    margin: 2em
+  }
+  .code-projects .project-container {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .code-projects .project-container button {
+    margin-top: 1em;
+    width: auto;
+    text-align: center
+  }
+  .code-projects .project-info,
+  .code-projects .project-info2,
+  .code-projects .project-info3,
+  .code-projects .project-info4 {
+    margin-bottom: 1em
+  }
+  .project-container button {
+    top: -9px
+  }
 }
-
-@media (max-width: 375px) {
-    .project-container h3 {
-        font-size: clamp(0.8rem, 2vw, 1.2rem);
-    }
-
-    .project-container button {
-        padding: 0.3em 0.8em;
-        font-size: 0.8rem;
-    }
+@media (max-width:375px) {
+  .project-container h3 {
+    font-size: clamp(.8rem, 2vw, 1.2rem)
+  }
+  .project-container button {
+    padding: .3em .8em;
+    font-size: .8rem
+  }
 }
-
-/* Design Projects Section */
 .design-projects {
   margin: 5em 10em;
-  margin-top: 7em;
+  margin-top: 7em
 }
-
 .design-projects h2 {
   margin-bottom: 1em;
-  border-bottom: 1px solid white;
-  padding-bottom: 1em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1em
 }
-
 .design-projects .project-container {
-  font-family: 'Panchang-Medium', Arial;
+  font-family: Panchang-Medium,Arial;
   margin-bottom: 1em;
-  border: 1px solid white;
+  border: 1px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 1em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform .3s ease,box-shadow .3s ease,background-color .3s ease
 }
-
 .design-projects .project-container:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.1)
 }
-
 .design-projects .project-container h3 {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem)
 }
-
 .design-projects .project-container button {
   display: inline-block;
-  background: #3F3536;
-  border: 2px solid white;
+  background: #3f3536;
+  border: 2px solid #fff;
   padding: 1em 1.5em;
   border-radius: 1.5em;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: 300ms;
-  box-shadow: 0 0 10px #FFD4F7;
+  transition: .3s;
+  box-shadow: 0 0 10px #ffd4f7
 }
-
 .design-projects .project-container button:hover {
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 20px #FFD4F7;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #ffd4f7
 }
-
 .design-projects .project-info,
 .design-projects .project-info2,
 .design-projects .project-info3,
 .design-projects .project-info4 {
   height: 0;
   overflow: hidden;
-  transition: height 0.3s ease, opacity 0.3s ease;
+  transition: height .3s ease,opacity .3s ease;
   margin-bottom: 1em;
-  opacity: 0;
+  opacity: 0
 }
-
 .design-projects .project-info.visible,
 .design-projects .project-info2.visible,
 .design-projects .project-info3.visible,
 .design-projects .project-info4.visible {
-  opacity: 1;
+  opacity: 1
 }
-
 .design-projects .project-info img,
 .design-projects .project-info2 img,
 .design-projects .project-info3 img,
 .design-projects .project-info4 img {
   width: 100%;
-  max-width: 500px; /* Increased from 400px */
+  max-width: 500px;
   border-radius: 10px;
-  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
   margin-bottom: 1em;
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
-
 .design-projects .project-info2 img {
   width: 100%;
-  max-width: 300px; /* Increased from 200px */
+  max-width: 300px;
   border-radius: 10px;
-  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
   margin-bottom: 1em;
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .project-info img:nth-of-type(2) {
-    display: none;
+    display: none
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .design-projects {
-    margin: 2em;
+    margin: 2em
   }
-  .design-projects .project-container {    flex-direction: column;    align-items: flex-start;  }  .design-projects .project-container button {    margin-top: 1em;    width: auto;    text-align: center;  }  .design-projects .project-info,  .design-projects .project-info2,  .design-projects .project-info3,  .design-projects .project-info4 {    margin-bottom: 1em;  }}/* Intro Design Section */.intro-design {  margin: 5em 10em;  margin-top: 7em;}@media (max-width: 768px) {  .intro-design {    margin: 5em 2em;  }}
+  .design-projects .project-container {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .design-projects .project-container button {
+    margin-top: 1em;
+    width: auto;
+    text-align: center
+  }
+  .design-projects .project-info,
+  .design-projects .project-info2,
+  .design-projects .project-info3,
+  .design-projects .project-info4 {
+    margin-bottom: 1em
+  }
+}
+.intro-design {
+  margin: 5em 10em;
+  margin-top: 7em
+}
+@media (max-width:768px) {
+  .intro-design {
+    margin: 5em 2em
+  }
+}
