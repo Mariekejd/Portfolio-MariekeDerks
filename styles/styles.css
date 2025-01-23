@@ -313,7 +313,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
   flex-flow: column;
   position: relative;
   padding: 5em 10em;
@@ -477,7 +477,7 @@ body {
   margin: 1em 10em
 }
 #toggle-carousel {
-  margin: 0 12em
+  margin: 0 9.7em
 }
 @media (max-width:768px) {
   .me, .intro {
@@ -523,7 +523,8 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  font-size: 1em;
 }
 #toggle-carousel::after {
   content: '';
