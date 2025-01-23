@@ -470,8 +470,7 @@ body {
   cursor: pointer
 }
 .me .profile {
-  max-width: 200px;
-  border-radius: 1.5em;
+  max-width: 300px;
   margin-left: 2em
 }
 #carousel-container {
@@ -489,7 +488,8 @@ body {
   .me > .profile {
     margin-top: 2em;
     margin-left: 0em;
-    margin-bottom: 1em
+    margin-bottom: 1em;
+    max-width: 200px;
   }
   .me button {
     margin: 1em 0;
