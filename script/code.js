@@ -5,22 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     infoButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const infoText = infoTexts[index];
-            infoText.classList.toggle('visible');
             if (infoText.classList.contains('visible')) {
-                infoText.style.height = infoText.scrollHeight + 'px';
-            } else {
                 infoText.style.height = '0';
-            }
-        });
-    });
-
-    infoTexts.forEach(infoText => {
-        infoText.addEventListener('transitionend', () => {
-            if (!infoText.classList.contains('visible')) {
-                infoText.style.display = 'none';
+                infoText.addEventListener('transitionend', () => {
+                    infoText.style.display = 'none';
+                }, { once: true });
             } else {
                 infoText.style.display = 'block';
+                infoText.style.height = infoText.scrollHeight + 'px';
             }
+            infoText.classList.toggle('visible');
         });
     });
 });

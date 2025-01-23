@@ -179,10 +179,10 @@ header nav .home-button {
     margin-left: 0
   }
 }
-@media (max-width:375px) {
+@media (max-width:444px) {
   header nav a {
     font-size: .875em;
-    padding: .3em .6em;
+    padding: .5em .75em;
     margin: .3em .2em
   }
   a.button,
@@ -471,7 +471,7 @@ body {
 }
 .me .profile {
   max-width: 200px;
-  border-radius: 50%;
+  border-radius: 1.5em;
   margin-left: 2em
 }
 #carousel-container {
@@ -732,10 +732,10 @@ dialog::backdrop {
   text-decoration: none;
   transition: .3s;
   position: absolute;
-  top: -40px;
-  right: -25px;
+  top: -55px;
+  right: -30px;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 2em;
   border: none
 }
 .close-dialog:hover {
@@ -978,6 +978,21 @@ body.dialog-open {
   color: #000;
   box-shadow: 0 0 20px #ffd4f7
 }
+
+.project-container a{
+  text-decoration: none;
+  color: white;
+  padding: .5em 1em;
+  border: 1px solid white;
+  border-radius: 2em;
+  transition: 300ms;
+}
+
+.project-container a:hover{
+  background-color: white;
+  color: black;
+}
+
 .project-info,
 .project-info2,
 .project-info3,
@@ -1006,7 +1021,7 @@ body.dialog-open {
   margin-left: auto;
   margin-right: auto
 }
-.project-info2 img {
+/* .project-info2 img {
   width: 100%;
   max-width: 300px;
   border-radius: 10px;
@@ -1014,7 +1029,7 @@ body.dialog-open {
   display: block;
   margin-left: auto;
   margin-right: auto
-}
+} */
 .flex-row {
   display: flex;
   flex-direction: row;
