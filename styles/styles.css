@@ -135,6 +135,22 @@ button:hover {
   background-color: #fff;
   color: #000
 }
+.button {
+  background: 0 0;
+  margin-top: .5em;
+  border: 2px solid #fff;
+  padding: .3em .8em;
+  border-radius: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+  font-family: 'panchang-regular', Arial;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+}
 header nav {
   display: flex;
   justify-content: flex-end
@@ -1118,10 +1134,13 @@ header.design nav .home-button {
 .project-details{
   display: flex;
   flex-direction: row;
+  margin-bottom: 7em;
 }
 
 .project-details img{
-  width: 50%;
+  width: 100%;
+  max-width: 50%;
+  height: 100%;
   margin: 0 2em;
   border-radius: 1em;
 }
@@ -1158,15 +1177,52 @@ header.design nav .home-button {
 
 }
 
+@media (max-width: 1033px) and (min-width: 769px) {
+
+  .project-details {
+    flex-direction: column;
+    flex: 1;
+    margin: 2em 4em;
+    margin-bottom: 7em;
+}
+
+  .project-details img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    margin: 0;
+    margin-bottom: 2em;
+  }
+
+  .design-title {
+    margin-left: 1.6em;
+  }
+
+  .project-imgs {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .project-imgs img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ...existing code... */
+}
+
 @media (max-width:768px) {
   .project-details {
     flex-direction: column;
     flex: 1;
     margin: 2em 4em;
+    margin-bottom: 7em;
 }
 
   .project-details img {
     width: 100%;
+    max-width: 80%;
+    height: auto;
     margin: 0;
     margin-bottom: 2em;
   }
@@ -1191,10 +1247,13 @@ header.design nav .home-button {
     flex-direction: column;
     flex: 1;
     margin: 2em 3em;
+    margin-bottom: 10em;
 }
 
   .project-details img {
     width: 100%;
+    max-width: 90%;
+    height: auto;
     margin: 0;
     margin-bottom: 2em;
   }
@@ -1211,6 +1270,12 @@ header.design nav .home-button {
   .project-imgs img {
     width: 100%;
     height: auto;
+  }
+
+  .button{
+    font-size: .8em;
+    padding: 0.5em 1em;
+
   }
 }
 
